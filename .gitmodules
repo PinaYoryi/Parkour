@@ -1,3 +1,3 @@
-[submodule "P32021"]
+[submodule "Motor"]
 	path = Motor
 	url = https://github.com/PinaYoryi/P32021
