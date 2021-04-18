@@ -1,0 +1,5 @@
+Para actualizar el motor hay que utilizar el comando 
+
+$ git submodule update --init --remote
+
+De esta forma se actualizará a la última versión del main
