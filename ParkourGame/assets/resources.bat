@@ -1,5 +1,5 @@
-cd ../dependencies/Ogre/Build/bin/debug
-copy /Y resources.cfg "../../../../../bin/resources.cfg"
+cd ../../P32021/bin
+copy /Y resources.cfg "../../ParkourGame/bin/resources.cfg"
 cd ../../../../../assets/OgreResources
 echo [General] >> ../../bin/resources.cfg
 echo FileSystem=../assets/OgreResources >> ../../bin/resources.cfg

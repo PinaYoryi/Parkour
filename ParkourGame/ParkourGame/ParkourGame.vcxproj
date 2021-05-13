@@ -132,8 +132,12 @@
     </Link>
     <PreBuildEvent>
       <Command>cd ../
-Parkour.bat</Command>
+ParkourDependencies.bat</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>cd ../assets
+resources.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -156,8 +160,12 @@ Parkour.bat</Command>
     </Link>
     <PreBuildEvent>
       <Command>cd ../
-Parkour.bat</Command>
+ParkourDependencies.bat</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>cd ../assets
+resources.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp" />
