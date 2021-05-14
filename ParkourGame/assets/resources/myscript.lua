@@ -25,7 +25,7 @@ local mapa = {
           trigger="false"
         },
         lifetime={
-          life="5",
+          life="15",
           year="2021"
         }
       }
