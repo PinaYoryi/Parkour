@@ -1,5 +1,7 @@
 #include <iostream>
 #include <PinaMotor.h>
+#include "Lifetime.h"
+#include "ComponentFactoryRegistration.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -11,10 +13,11 @@ int WINAPI
 WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdShow) {
 #endif
     std::cout << "Hello World!\n";
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<Lifetime>("lifetime");
     PinaMotor motor;
     motor.init("Test");
 
-    motor.launch("escenaprueba.lua");
+    motor.launch("myscript.lua");
 
     motor.close();
 }
