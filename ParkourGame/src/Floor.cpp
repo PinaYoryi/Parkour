@@ -8,6 +8,6 @@ bool Floor::init(const std::map<std::string, std::string>& mapa) {
 
 void Floor::onCollisionStart(Entity* other) {
 	if (other->getComponent<PlayerController>() != nullptr) {
-		other->getComponent<Rigidbody>()->setGravity(Vector3<>(0, 1, 0))
+		other->getComponent<Rigidbody>()->setGravity(Vector3<>(0, 1, 0));
 	}
 }
