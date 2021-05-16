@@ -1,6 +1,8 @@
 #include <iostream>
 #include <PinaMotor.h>
 #include "Lifetime.h"
+#include "DroneAI.h"
+#include "FlyingAI.h"
 #include "ComponentFactoryRegistration.h"
 
 #if (defined _DEBUG)
@@ -14,10 +16,12 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
 #endif
     std::cout << "Hello World!\n";
     ComponentFactoryRegistrations::ComponentFactoryRegistration<Lifetime>("lifetime");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<DroneAI>("droneai");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<FlyingAI>("flyingai");
     PinaMotor motor;
     motor.init("Test");
 
-    motor.launch("myscript.lua");
+    motor.launch("aitest.lua");
 
     motor.close();
 }
