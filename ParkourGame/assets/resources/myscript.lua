@@ -15,14 +15,16 @@ local mapa = {
           mesh="Sinbad.mesh",
           material="",
           visible="true"
-        },
+        }
+        ,
         rigidbody={
           shape="-1",
           mass="54",
           inertia="0,0,0",
           restitution="0.2",
           damping="0.2,0.2",
-          trigger="false"
+          trigger="false",
+          kinematic ="false"
         },
         lifetime={
           life="15",
