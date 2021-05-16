@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "Rigidbody.h"
 #include <math.h>
+#include "PlayerController.h"
 
 bool Floor::init(const std::map<std::string, std::string>& mapa) {
 	return true;
