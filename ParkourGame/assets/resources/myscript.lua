@@ -15,7 +15,8 @@ local mapa = {
           mesh="Sinbad.mesh",
           material="",
           visible="true"
-        },
+        }
+        ,
         rigidbody={
           shape="-1",
           mass="54",
