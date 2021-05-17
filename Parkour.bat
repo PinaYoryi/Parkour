@@ -9,3 +9,4 @@ cd ParkourGame
 msbuild ParkourGame.sln -p:Configuration=Debug
 msbuild ParkourGame.sln -p:Configuration=Release
 echo BUILDING DONE
+cd ..

@@ -22,7 +22,6 @@ void GameManager::onFinish(float time, bool win) {
 	if (win) toScene("winscene.lua");
 	else toScene("aitest.lua");
 }
-
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)
 	{
