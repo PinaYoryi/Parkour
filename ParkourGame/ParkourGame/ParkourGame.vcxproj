@@ -171,20 +171,20 @@ resources.bat</Command>
     <ClCompile Include="..\src\DronMissile.cpp" />
     <ClCompile Include="..\src\DroneAI.cpp" />
     <ClCompile Include="..\src\Floor.cpp" />
+    <ClCompile Include="..\src\PlayerController.cpp" />
     <ClCompile Include="..\src\ShootingAI.cpp" />
     <ClCompile Include="..\src\GameManager.cpp" />
     <ClCompile Include="..\src\Lifetime.cpp" />
     <ClCompile Include="..\src\main.cpp" />
-    <ClCompile Include="..\src\PlayerController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\DronMissile.h" />
     <ClInclude Include="..\src\DroneAI.h" />
     <ClInclude Include="..\src\Floor.h" />
+    <ClInclude Include="..\src\PlayerController.h" />
     <ClInclude Include="..\src\ShootingAI.h" />
     <ClInclude Include="..\src\GameManager.h" />
     <ClInclude Include="..\src\Lifetime.h" />
-    <ClInclude Include="..\src\PlayerController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

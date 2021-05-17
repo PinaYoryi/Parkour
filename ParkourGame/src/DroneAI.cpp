@@ -2,6 +2,7 @@
 #include "SceneManager.h"
 #include "BasicAI.h"
 #include "PlayerController.h"
+#include "GameManager.h" //Temporal
 
 bool DroneAI::init(const std::map<std::string, std::string>& mapa) {
 	if (mapa.find("strength") == mapa.end() || mapa.find("objective") == mapa.end()) return false;
@@ -22,11 +23,12 @@ void DroneAI::update() {
 }
 
 void DroneAI::onCollisionStart(Entity* other) { 
-	if (other->hasComponent<PlayerController>()) {
-		other->getComponent<PlayerController>()->playerDead();
-	/*if (other->getName()=="Sinbad") {
+	/*if (other->hasComponent<PlayerController>()) {
+		other->getComponent<PlayerController>()->playerDead();*/
+	if (other->getName()=="Sinbad") {
 #if (defined _DEBUG)
 		std::cout << "Jugador muere\n";
-#endif*/
+#endif
+		//GameManager::GetInstance()->onFinish(0.0, false); //Temporal
 	}
 }
