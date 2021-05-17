@@ -50,15 +50,10 @@ local mapa = {
           trigger="false",
           kinematic="true"
         },
-        basicai={
-          step="150",
-          threshold="0.5",
-          thresholdRot="0.1",
-          stepRot="0.0002"
-        },
-        droneai={
-          strength="400",
-          objective="1"
+        shotai={
+          objective="1",
+          proyectile="bala.prefab",
+          rof="3"
         }
       }
     },

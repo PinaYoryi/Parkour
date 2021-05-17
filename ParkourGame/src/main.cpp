@@ -1,10 +1,14 @@
 #include <iostream>
 #include <PinaMotor.h>
+
+#include "ComponentFactoryRegistration.h"
+
 #include "Lifetime.h"
 #include "DroneAI.h"
-#include "FlyingAI.h"
+#include "ShootingAI.h"
+#include "DronMissile.h"
+#include "Floor.h"
 #include "GameManager.h"
-#include "ComponentFactoryRegistration.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -17,15 +21,17 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
 #endif
     std::cout << "Hello World!\n";
     ComponentFactoryRegistrations::ComponentFactoryRegistration<Lifetime>("lifetime");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<Floor>("floor");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DroneAI>("droneai");
-    ComponentFactoryRegistrations::ComponentFactoryRegistration<FlyingAI>("flyingai");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<ShootingAI>("shotai");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
 
     GameManager::Init();
 
     PinaMotor motor;
     motor.init("Test");
 
-    motor.launch("aitest.lua");
+    motor.launch("startscene.lua");
 
     motor.close();
 
