@@ -1,9 +1,12 @@
 #include <iostream>
 #include <PinaMotor.h>
+
+#include "ComponentFactoryRegistration.h"
+
 #include "Lifetime.h"
 #include "DroneAI.h"
-#include "FlyingAI.h"
-#include "ComponentFactoryRegistration.h"
+#include "ShootingAI.h"
+#include "DronMissile.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -17,7 +20,8 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     std::cout << "Hello World!\n";
     ComponentFactoryRegistrations::ComponentFactoryRegistration<Lifetime>("lifetime");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DroneAI>("droneai");
-    ComponentFactoryRegistrations::ComponentFactoryRegistration<FlyingAI>("flyingai");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<ShootingAI>("shotai");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
     PinaMotor motor;
     motor.init("Test");
 
