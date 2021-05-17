@@ -9,7 +9,7 @@ bool Floor::init(const std::map<std::string, std::string>& mapa) {
 }
 
 void Floor::onCollisionStart(Entity* other) {
-	if (other->getComponent<PlayerController>() != nullptr) {
+	if (/*other->getComponent<PlayerController>() != nullptr*/other->getName() == "Sinbad") {
 		Vector3<> ang = other->getComponent<Transform>()->rotation().toEuler();
 		ang *= M_PI_2 / 180; // A radianes
 		other->getComponent<Rigidbody>()->setGravity({ -cos(ang.y) * sin(ang.x) * sin(ang.z) - sin(ang.y) * cos(ang.z), 
