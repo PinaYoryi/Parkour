@@ -3,8 +3,9 @@
 #include "Input.h"
 #include "OgreMotor.h"
 #include <OgreRenderWindow.h>
+#include "GameManager.h"
 
-PlayerController::PlayerController() : _trans(nullptr), _sensibility(0), _pitch(0), _yaw(0) {
+PlayerController::PlayerController() : _trans(nullptr), _sensibility(0), _pitch(0), _yaw(0), _time(0) {
 }
 
 bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
@@ -26,6 +27,9 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 void PlayerController::update() {
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_ESCAPE)) _active = !_active;
 	if (!_active) return;
+
+	_time += GameManager::GetInstance()->getDeltaTime();
+
 	Ogre::RenderWindow* win = OgreMotor::GetInstance()->getRenderWindow();
 	Vector2<int> center(win->getWidth() / 2, win->getHeight() / 2);
 	Vector2<int> dir = Input::GetInstance()->getMousePos() - center;
@@ -44,4 +48,8 @@ void PlayerController::update() {
 
 	_trans->setLocalRotation(Quaternion::Euler({ _pitch, _yaw, 0 }));
 	Input::GetInstance()->setMousePos(center);
+}
+
+void PlayerController::playerDead() {
+	GameManager::GetInstance()->onFinish(false, _time);
 }

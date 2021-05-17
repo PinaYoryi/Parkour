@@ -3,6 +3,7 @@
 #include "Lifetime.h"
 #include "DroneAI.h"
 #include "FlyingAI.h"
+#include "GameManager.h"
 #include "ComponentFactoryRegistration.h"
 
 #if (defined _DEBUG)
@@ -18,10 +19,15 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<Lifetime>("lifetime");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DroneAI>("droneai");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<FlyingAI>("flyingai");
+
+    GameManager::Init();
+
     PinaMotor motor;
     motor.init("Test");
 
     motor.launch("aitest.lua");
 
     motor.close();
+
+    delete GameManager::GetInstance();
 }

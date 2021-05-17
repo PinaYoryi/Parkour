@@ -22,7 +22,13 @@ public:
 	/// </summary>
 	void setSensibility(float sen) { _sensibility = sen; }
 
+	/// <summary>
+	/// Le dice al game manager que cambia de escena con todo lo que conlleva
+	/// </summary>
+	void playerDead();
+
 protected:
 	Transform* _trans;
 	float _pitch, _yaw, _sensibility;
+	float _time;
 };
