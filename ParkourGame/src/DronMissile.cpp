@@ -1,5 +1,6 @@
 #include "DronMissile.h"
 #include "SceneManager.h"
+#include "BasicAI.cpp"
 
 bool DronMissile::init(const std::map<std::string, std::string>& mapa) {
 	return true;

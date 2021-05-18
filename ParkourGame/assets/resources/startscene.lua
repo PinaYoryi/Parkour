@@ -39,36 +39,71 @@ local mapa = {
         }
       }
     },
-    --{ 
-    --  name="Drone",
-    --  id=5,
-    --  components={
-    --    transform={
-    --      position="0,40,0",
-    --      rotation="0,90,0",
-    --      scale="1,1,1"
-    --    },
-    --    renderer={
-    --      mesh="Sinbad.mesh",
-    --      material="",
-    --      visible="true"
-    --    },
-    --    rigidbody={
-    --      shape="0",
-    --      mass="54",
-    --      inertia="0,0,0",
-    --      restitution="0.2",
-    --      damping="0.2,0.2",
-    --      trigger="false",
-    --      kinematic="true"
-    --    },
-    --    shotai={
-    --      objective="1",
-    --      proyectile="bala.prefab",
-    --      rof="3"
-    --    }
-    --  }
-    --},
+    { 
+      name="DroneShoot",
+      id=5,
+      components={
+        transform={
+          position="0,30,20",
+          rotation="0,90,0",
+          scale="1,1,1"
+        },
+        renderer={
+          mesh="Sinbad.mesh",
+          material="",
+          visible="true"
+        },
+        rigidbody={
+          shape="0",
+          mass="54",
+          inertia="0,0,0",
+          restitution="0.2",
+          damping="0.2,0.2",
+          trigger="false",
+          kinematic="true"
+        },
+        shotai={
+          objective="1",
+          proyectile="bala.prefab",
+          rof="3"
+        }
+      }
+    },
+    { 
+      name="DroneRam",
+      id=6,
+      components={
+        transform={
+          position="-10,5,0",
+          rotation="0,90,0",
+          scale="1,1,1"
+        },
+        renderer={
+          mesh="Sinbad.mesh",
+          material="",
+          visible="true"
+        },
+        rigidbody={
+          shape="0",
+          mass="54",
+          inertia="0,0,0",
+          restitution="0.2",
+          damping="0.2,0.2",
+          trigger="false",
+          kinematic="false"
+        },
+        basicai={
+          step="150",
+          threshold="0.01",
+          thresholdRot="0.1",
+          stepRot="0.0002"
+        },
+        droneai={
+          strength="150"
+          objective="1"
+        }
+      }
+    },
     {
     name="Luz",
     id=3,

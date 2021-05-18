@@ -27,7 +27,6 @@ void ShootingAI::update() {
 
 		Entity* bala = Entity::instantiate(_bala, _myEntity->getComponent<Transform>()->position());
 
-
 		Vector3<> ini = _myEntity->getComponent<Transform>()->position();	// Inicio del trayecto
 		Vector3<> fin = _objective->getComponent<Transform>()->position();	// FInal del trayecto
 		Vector3<> tra = (fin - ini).normalize();							// Dirección del trayecto
