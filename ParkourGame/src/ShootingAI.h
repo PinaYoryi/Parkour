@@ -9,10 +9,8 @@ public:
 	void update() override;
 protected:
 private:
-	Entity* _objective;
-
-	string _bala;
-	float _RoF;
-
-	float _cooldown;
+	Entity* _objective;	// Objetivo de los disparos
+	string _bala;		// Prefab de la bala
+	float _RoF;			// Segundos que hay que esperar por cada disparo
+	float _cooldown;	// Segundo hasta el último disparo
 };

@@ -9,8 +9,9 @@ bool Floor::init(const std::map<std::string, std::string>& mapa) {
 	return true;
 }
 
+// Si es el "Sinbad", cambia su gravedad a la negativa de su normal
 void Floor::onCollisionStart(Entity* other) {
-	if (/*other->getComponent<PlayerController>() != nullptr*/other->getName() == "Sinbad") {
+	if (other->getName() == "Sinbad") {
 		Vector3<> dir = _myEntity->getComponent<Transform>()->rotation().toVector();
 		dir = dir.rotate(90, { -1, 0, 0 });
 		cout << dir << "\n";

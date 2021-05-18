@@ -6,6 +6,4 @@ public:
 	Floor() {};
 	bool init(const std::map<std::string, std::string>& mapa) override;
 	void onCollisionStart(Entity* other) override;
-protected:
-private:
 };

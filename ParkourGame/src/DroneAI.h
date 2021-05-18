@@ -10,6 +10,6 @@ public:
 	void onCollisionStart(Entity* other) override;
 
 private:
-	Entity* _objective;
-	float _strength;
+	Entity* _objective;	// Objetivo al que debe ir
+	float _strength;	// Fuerza con la que va al objetivo
 };

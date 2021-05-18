@@ -71,10 +71,10 @@ local mapa = {
     },
     { 
       name="DroneRam",
-      id=6,
+      id=7,
       components={
         transform={
-          position="-10,5,0",
+          position="-20,5,0",
           rotation="0,90,0",
           scale="1,1,1"
         },
@@ -99,7 +99,7 @@ local mapa = {
           stepRot="0.0002"
         },
         droneai={
-          strength="150"
+          strength="100",
           objective="1"
         }
       }

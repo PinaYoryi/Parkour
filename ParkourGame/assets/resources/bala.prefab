@@ -16,7 +16,7 @@ local prefab = {
 
         },
         basicai={
-          step="1000",
+          step="800",
           threshold="0.01",
           thresholdRot="0.1",
           stepRot="0.0002"

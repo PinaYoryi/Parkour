@@ -15,6 +15,7 @@ bool DroneAI::init(const std::map<std::string, std::string>& mapa) {
 	if (_objective == nullptr) return false;
 }
 
+// Se mueve hacia la el objetivo, y pone su misma rotación
 void DroneAI::update() {
 	_myEntity->getComponent<BasicAI>()->MoveTo(_objective->getComponent<Transform>()->position());
 	_myEntity->getComponent<BasicAI>()->setStep(_strength);
@@ -22,10 +23,9 @@ void DroneAI::update() {
 	//_myEntity->getComponent<BasicAI>()->setStepRot()
 }
 
+// Si es "SInbad" (el jugador), le dice que se muere de momento (cuando se pueda destruir bien la escena se matará)
 void DroneAI::onCollisionStart(Entity* other) { 
-	/*if (other->hasComponent<PlayerController>()) {
-		other->getComponent<PlayerController>()->playerDead();*/
-	if (other->getName()=="Sinbad") {
+	if (other->getName() == "Sinbad") {
 #if (defined _DEBUG)
 		std::cout << "Jugador muere\n";
 #endif

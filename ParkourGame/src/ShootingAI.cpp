@@ -20,6 +20,7 @@ bool ShootingAI::init(const std::map<std::string, std::string>& mapa) {
 	return true;
 }
 
+// Si acaba el cooldown, instancia una bala en la ligeramente fuera en la dirección del objetivo y la envía en esa dirección "al infinito"
 void ShootingAI::update() {
 	_cooldown -= MotorLoop::GetInstance()->getDeltaTime();
 	if (_cooldown < 0) {
