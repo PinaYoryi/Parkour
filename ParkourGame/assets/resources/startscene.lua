@@ -9,21 +9,33 @@ local mapa = {
         transform={
           position="0,0,0",
           rotation="0,0,0",
-          scale="2,2,2"
-        },
-        renderer={
-          mesh="Sinbad.mesh",
-          material="",
-          visible="true"
+          scale="1,1,1"
         },
         rigidbody={
-          shape="0",
-          mass="54",
+          shape="-1",
+          mass="10",
           inertia="0,0,0",
           restitution="0.2",
           damping="0.2,0.2",
           trigger="false",
           kinematic="false"
+        },
+        camera={
+          near="0.1",
+          far="1000",
+          autoaspect="true",
+          aspect="1.78",
+          fov="50",
+          proyection="1",
+          viewport="0,0,1,1",
+          color="0,0,0"
+        },
+        renderer={
+          mesh="Sinbad.mesh",
+          material="",
+          visible="false"
+        },
+        playercontroller={
         }
       }
     },
@@ -57,27 +69,6 @@ local mapa = {
     --    }
     --  }
     --},
-    {
-      name="Camera",
-      id=2,
-      components={
-        transform={
-          position="0,-50,200",
-          rotation="0,0,0",
-          scale="1,1,1"
-        },
-        camera={
-          near="0.1",
-          far="1000",
-          autoaspect="true",
-          aspect="1.78",
-          fov="50",
-          proyection="1",
-          viewport="0,0,1,1",
-          color="0.0,0.0,0.0"
-        }
-      }
-    },
     {
     name="Luz",
     id=3,
@@ -120,6 +111,9 @@ local mapa = {
           damping="0.2,0.2",
           trigger="false",
           kinematic="false"
+        },
+        floor={
+
         }
       }
     },
@@ -128,7 +122,7 @@ local mapa = {
       id=5,
       components={
         transform={
-          position="50,-90,-100",
+          position="50,-98,-100",
           rotation="0,0,0",
           scale="0.7,0.1,0.7"
         },
@@ -145,16 +139,19 @@ local mapa = {
           damping="0.2,0.2",
           trigger="false",
           kinematic="false"
+        },
+        floor={
+          
         }
       }
-    }  ,
+    },
     {
       name="Plat2",
       id=6,
       components={
         transform={
-          position="10,-90,-200",
-          rotation="0,0,0",
+          position="10,-97,-200",
+          rotation="90,0,0",
           scale="0.7,0.1,0.7"
         },
         renderer={
@@ -170,6 +167,9 @@ local mapa = {
           damping="0.2,0.2",
           trigger="false",
           kinematic="false"
+        },
+        floor={
+          
         }
       }
     }      

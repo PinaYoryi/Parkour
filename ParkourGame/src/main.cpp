@@ -9,6 +9,7 @@
 #include "DronMissile.h"
 #include "Floor.h"
 #include "GameManager.h"
+#include "PlayerController.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -25,6 +26,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DroneAI>("droneai");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<ShootingAI>("shotai");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<PlayerController>("playercontroller");
 
     GameManager::Init();
 

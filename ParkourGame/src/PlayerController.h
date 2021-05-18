@@ -38,6 +38,11 @@ public:
 	/// </summary>
 	void playerDead();
 
+	/// <summary>
+	/// Resetea el número de saltos que puede hacer
+	/// </summary>
+	void restoreJumps();
+
 protected:
 	Transform* _trans;
 	Rigidbody* _rigidbody;
@@ -45,4 +50,7 @@ protected:
 	float _time; //Tiempo que ha durado vivo el jugador
 	float _speed;
 	bool _inMenu;
+
+	int _maxJump;
+	int _remJump;
 };

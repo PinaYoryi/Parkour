@@ -17,6 +17,7 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 	_sensibility = 1.0f;
 	_speed = 250.0f;
 	_inMenu = false;
+	_maxJump = _remJump = 2;
 	return true;
 }
 
@@ -43,33 +44,42 @@ void PlayerController::update() {
 }
 
 void PlayerController::fixedUpdate() {
-	bool input = false;
+	bool moveInput = false;
 	float rotation = 0;
 	if (Input::GetInstance()->keyHold(SDL_SCANCODE_W)) {
 		std::cout << "W: ";
-		input = true;
+		moveInput = true;
 	}
 	else if (Input::GetInstance()->keyHold(SDL_SCANCODE_A)) {
 		std::cout << "A: ";
 		rotation = 270;
-		input = true;
+		moveInput = true;
 	}
 	else if (Input::GetInstance()->keyHold(SDL_SCANCODE_S)) {
 		std::cout << "S: ";
 		rotation = 180;
-		input = true;
+		moveInput = true;
 	}
 	else if (Input::GetInstance()->keyHold(SDL_SCANCODE_D)) {
 		std::cout << "D: ";
 		rotation = 90;
-		input = true;
+		moveInput = true;
 	}
 
-	if (input) {
+	if (moveInput) {
 		Vector3<> dir = _trans->rotation().toVector();
 		dir = dir.rotate(rotation, _rigidbody->getGravity());
 		_rigidbody->addForce(dir * _speed);
 	}
+
+	if (Input::GetInstance()->keyDown(SDL_SCANCODE_SPACE) && _remJump-- > 0) {
+		std::cout << "SALTA\n";
+		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -5000);
+	}
+}
+
+void PlayerController::restoreJumps() {
+	_remJump = _maxJump;
 }
 
 void PlayerController::playerDead() {
