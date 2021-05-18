@@ -13,9 +13,7 @@ void Floor::onCollisionStart(Entity* other) {
 	if (/*other->getComponent<PlayerController>() != nullptr*/other->getName() == "Sinbad") {
 		Vector3<> dir = _myEntity->getComponent<Transform>()->rotation().toVector();
 		dir = dir.rotate(90, { -1, 0, 0 });
-		cout << dir << "\n";
 		other->getComponent<Rigidbody>()->setGravity(dir.normalized() * 9.8);
-		other->getComponent<Transform>()->setRotation(_myEntity->getComponent<Transform>()->rotation());
 		other->getComponent<PlayerController>()->restoreJumps();
 	}
 }

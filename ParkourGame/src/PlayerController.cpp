@@ -38,42 +38,42 @@ void PlayerController::update() {
 		if (_yaw >= 180) _yaw -= 360;
 		else if (_yaw < -180) _yaw += 360;
 
-		_trans->setLocalRotation(Quaternion::Euler({ _pitch, _yaw, 0 }));
+		Vector3<> gravity = _rigidbody->getGravity().normalized();
+		_trans->setRotation(Quaternion::Euler({ _pitch + (float)gravity.angleDegrees({0,-1,0}), _yaw - (float)gravity.angleDegrees({0,-1,0}),  0 }));
 		Input::GetInstance()->setMousePos(center);
 	}
 }
 
 void PlayerController::fixedUpdate() {
 	bool moveInput = false;
-	float rotation = 0;
+	Vector3<> rotation = { 0,0,0 };
 	if (Input::GetInstance()->keyHold(SDL_SCANCODE_W)) {
-		std::cout << "W: ";
-		moveInput = true;
-	}
-	else if (Input::GetInstance()->keyHold(SDL_SCANCODE_A)) {
-		std::cout << "A: ";
-		rotation = 270;
+		rotation += {1, 0, 0};
 		moveInput = true;
 	}
 	else if (Input::GetInstance()->keyHold(SDL_SCANCODE_S)) {
-		std::cout << "S: ";
-		rotation = 180;
+		rotation += {-1, 0, 0};
+		moveInput = true;
+	}
+
+	if (Input::GetInstance()->keyHold(SDL_SCANCODE_A)) {
+		rotation += {0, 0, -1};
 		moveInput = true;
 	}
 	else if (Input::GetInstance()->keyHold(SDL_SCANCODE_D)) {
-		std::cout << "D: ";
-		rotation = 90;
+		rotation += {0, 0, 1};
 		moveInput = true;
 	}
 
 	if (moveInput) {
+		rotation.normalize();
 		Vector3<> dir = _trans->rotation().toVector();
-		dir = dir.rotate(rotation, _rigidbody->getGravity());
+		dir = dir.crossProduct(_rigidbody->getGravity()).rotate(90, _rigidbody->getGravity()).normalize();
+		dir = dir.rotate((180 / M_PI) * atan2(rotation.z, rotation.x), _rigidbody->getGravity());
 		_rigidbody->addForce(dir * _speed);
 	}
 
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_SPACE) && _remJump-- > 0) {
-		std::cout << "SALTA\n";
 		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -5000);
 	}
 }
