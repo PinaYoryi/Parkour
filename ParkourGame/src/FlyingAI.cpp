@@ -8,7 +8,7 @@ bool FlyingAI::init(const std::map<std::string, std::string>& mapa) {
 	std::string s = mapa.at("strength");
 	_strength = std::stof(s);
 	s = mapa.at("objective");
-	_objective = SceneManager::GetInstance()->getEntityByID(std::stoi(s), true);
+	_objective = SceneManager::GetInstance()->getEntityByID(std::stoi(s));
 	if (_objective == nullptr) return false;
 }
 
