@@ -32,5 +32,5 @@ void GameManager::toScene(std::string scene, sceneState state) {
 		SceneManager::GetInstance()->pauseScene();
 		break;
 	}
-	SceneManager::GetInstance()->loadScene(scene);
+	SceneManager::GetInstance()->newScene(scene);
 }
