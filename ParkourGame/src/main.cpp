@@ -10,6 +10,7 @@
 #include "Floor.h"
 #include "GameManager.h"
 #include "PlayerController.h"
+#include "LevelBuilder.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -27,13 +28,14 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<ShootingAI>("shotai");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<PlayerController>("playercontroller");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<LevelBuilder>("levelbuilder");
 
     GameManager::Init();
 
     PinaMotor motor;
     motor.init("Test");
 
-    motor.launch("startscene.lua");
+    motor.launch("level.lua");
 
     motor.close();
 
