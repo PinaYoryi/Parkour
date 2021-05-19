@@ -31,9 +31,23 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     GameManager::Init();
 
     PinaMotor motor;
-    motor.init("Test");
+    if (!motor.init("Test")) {
+#if (defined _DEBUG)
+        std::cerr << "\nError en init\n";
+#endif
+        delete GameManager::GetInstance();
+        motor.close();
+        return -1;
+    }
 
-    motor.launch("startscene.lua");
+    if (!motor.launch("myscript.lua")) {
+#if (defined _DEBUG)
+        std::cerr << "\nError en launch\n";
+#endif
+        delete GameManager::GetInstance();
+        motor.close();
+        return -1;
+    }
 
     motor.close();
 
