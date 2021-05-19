@@ -9,7 +9,8 @@ local mapa = {
         transform={
           position="0,0,0",
           rotation="0,0,0",
-          scale="1,1,1"
+          scale="1,1,1",
+          parent="-1"
         },
         rigidbody={
           shape="-1",
@@ -76,7 +77,8 @@ local mapa = {
       transform={
         position="50,0,0",
         rotation="290,145,0",
-        scale="1,1,1"
+        scale="1,1,1",
+        parent="-1"
       },
       light={
         type="1",
@@ -96,7 +98,8 @@ local mapa = {
         transform={
           position="0,-100,0",
           rotation="0,0,0",
-          scale="0.75,0.1,0.75"
+          scale="0.75,0.1,0.75",
+          parent="-1"
         },
         renderer={
           mesh="cube.mesh",
@@ -124,7 +127,8 @@ local mapa = {
         transform={
           position="50,-98,-100",
           rotation="0,0,0",
-          scale="0.7,0.1,0.7"
+          scale="0.7,0.1,0.7",
+          parent="-1"
         },
         renderer={
           mesh="cube.mesh",
@@ -152,7 +156,8 @@ local mapa = {
         transform={
           position="10,-97,-200",
           rotation="90,0,0",
-          scale="0.7,0.1,0.7"
+          scale="0.7,0.1,0.7",
+          parent="-1"
         },
         renderer={
           mesh="cube.mesh",
@@ -166,7 +171,8 @@ local mapa = {
           restitution="0.2",
           damping="0.2,0.2",
           trigger="false",
-          kinematic="false"
+          kinematic="false",
+          parent="-1"
         },
         floor={
           

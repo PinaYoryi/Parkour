@@ -11,7 +11,7 @@ protected:
 private:
 	Entity* _objective;
 
-	string _bala;
+	std::string _bala;
 	float _RoF;
 
 	float _cooldown;
