@@ -9,7 +9,8 @@ local mapa = {
         transform={
           position="0,0,0",
           rotation="0,0,0",
-          scale="2,2,2"
+          scale="2,2,2",
+          parent="-1"
         },
         renderer={
           mesh="Sinbad.mesh",
@@ -34,7 +35,8 @@ local mapa = {
         transform={
           position="0,40,0",
           rotation="0,90,0",
-          scale="1,1,1"
+          scale="1,1,1",
+          parent="-1"
         },
         renderer={
           mesh="Sinbad.mesh",
@@ -64,7 +66,8 @@ local mapa = {
         transform={
           position="0,-50,200",
           rotation="0,0,0",
-          scale="1,1,1"
+          scale="1,1,1",
+          parent="-1"
         },
         camera={
           near="0.1",
@@ -85,7 +88,8 @@ local mapa = {
       transform={
         position="50,0,0",
         rotation="0,0,0",
-        scale="1,1,1"
+        scale="1,1,1",
+        parent="-1"
       },
       light={
         type="0",
@@ -105,7 +109,8 @@ local mapa = {
         transform={
           position="0,-100,0",
           rotation="0,0,0",
-          scale="3,0.2,3"
+          scale="3,0.2,3",
+          parent="-1"
         },
         renderer={
           mesh="cube.mesh",

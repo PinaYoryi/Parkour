@@ -8,7 +8,6 @@ public:
 	bool init(const std::map<std::string, std::string>& mapa) override;
 	void update() override;
 	void onCollisionStart(Entity* other) override;
-
 private:
 	Entity* _objective;
 	float _strength;

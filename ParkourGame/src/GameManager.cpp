@@ -20,9 +20,8 @@ float GameManager::getDeltaTime() {
 void GameManager::onFinish(float time, bool win) {
 	_secondsLasted = time;
 	if (win) toScene("winscene.lua");
-	else toScene("losescene.lua");
+	else toScene("aitest.lua");
 }
-
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)
 	{

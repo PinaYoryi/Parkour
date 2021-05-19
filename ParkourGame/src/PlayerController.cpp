@@ -83,5 +83,5 @@ void PlayerController::restoreJumps() {
 }
 
 void PlayerController::playerDead() {
-	GameManager::GetInstance()->onFinish(false, _time);
+	GameManager::GetInstance()->onFinish(_time, false);
 }
