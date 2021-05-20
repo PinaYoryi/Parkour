@@ -23,6 +23,7 @@ void Lifetime::update(){
 		_currentTime += GameManager::GetInstance()->getDeltaTime();	// El tiempo que lleva
 		if (_currentTime >= _endTime) {	// Si debe morir
 			SceneManager::GetInstance()->addEntityToRemove(_myEntity);
+			std::cout << "DELETING " << _myEntity->getName() << "\n";
 		}
 	}
 }

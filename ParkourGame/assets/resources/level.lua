@@ -87,7 +87,10 @@ local mapa = {
         },
         floor={
 
-        }
+        },
+        lifetime={
+          life="12"
+        },
       }
     },
     {
@@ -97,7 +100,7 @@ local mapa = {
         levelbuilder={
           platformprefab="platform.prefab",
           lastplatform="4",
-          time="10"
+          time="3.5"
         }
       }
     }

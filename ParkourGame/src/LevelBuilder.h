@@ -10,8 +10,9 @@ public:
 protected:
 private:
 	std::string _platfromPrefab;	// Plataforma que pondrá
-	Transform* _lastTransform;		// Transform de la última plataforma puesta
+	Vector3<> _lastP;				// Posición de la última plataforma puesta
+	Vector3<> _lastR;				// Rotación de la última plataforma puesta
 
-	float _mTime;					// Tiempo máximo entre plaatformas
+	float _mTime;					// Tiempo máximo entre plataformas
 	float _cTime;					// Tiempo restante entre plataformas
 };

@@ -14,7 +14,8 @@ bool LevelBuilder::init(const std::map<std::string, std::string>& mapa) {
 	_platfromPrefab = s;
 
 	s = mapa.at("lastplatform");
-	_lastTransform = SceneManager::GetInstance()->getEntityByID(std::stoi(s))->getComponent<Transform>();
+	_lastP = SceneManager::GetInstance()->getEntityByID(std::stoi(s))->getComponent<Transform>()->position();
+	_lastR = SceneManager::GetInstance()->getEntityByID(std::stoi(s))->getComponent<Transform>()->rotation().toEuler();
 
 	s = mapa.at("time");
 	_mTime = _cTime = std::stof(s);
@@ -27,15 +28,16 @@ void LevelBuilder::update() {
 	if (_cTime < 0) {
 		_cTime = _mTime;
 		
-		Vector3<> prevP = _lastTransform->position();
-		Vector3<> prevA = _lastTransform->rotation().toEuler();
-		Entity* platform = Entity::instantiate(_platfromPrefab, prevP);
-		_lastTransform = platform->getComponent<Transform>();
+		Entity* platform = Entity::instantiate(_platfromPrefab, _lastP);	// Se genera una plataforma en la posición antigua
+		Rigidbody* pRigid = platform->getComponent<Rigidbody>();
 		
-		float posVarX = (rand() % 30) - 15;		// Variación en X
+		float posVarX = (rand() % 50) - 25;		// Variación en X
 		float posVarY = (rand() % 5) - 2.5;		// Variación en Y
-		float posVarAng = (rand() % 180) - 90;	// variación en ángulo en z
-		_lastTransform->setPosition({prevP.x + posVarX, prevP.y + posVarY, prevP.z - 100});
-		_lastTransform->setRotation(prevA.x, prevA.y, prevA.z + posVarAng);
+		float posVarAng = (rand() % 90) - 45;	// variación en ángulo en z
+		pRigid->setPosition({ _lastP.x + posVarX, _lastP.y + posVarY, _lastP.z - 100});	// Se mueve 
+		pRigid->setRotation(Quaternion::Euler({ _lastR.x, _lastR.y, _lastR.z + posVarAng }));					// Y orienta según las variaciones aleatorias
+
+		_lastP = { _lastP.x + posVarX, _lastP.y + posVarY, _lastP.z - 100 };
+		_lastR = { _lastR.x, _lastR.y, _lastR.z + posVarAng };
 	}
 }
