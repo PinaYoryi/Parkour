@@ -17,10 +17,9 @@ float GameManager::getDeltaTime() {
 	return MotorLoop::GetInstance()->getDeltaTime();
 }
 
-void GameManager::onFinish(float time, bool win) {
+void GameManager::onFinish(float time) {
 	_secondsLasted = time;
-	if (win) toScene("winscene.lua");
-	else toScene("aitest.lua");
+	toScene("aitest.lua");
 }
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)

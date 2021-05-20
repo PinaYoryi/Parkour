@@ -5,7 +5,19 @@
 #include <OgreRenderWindow.h>
 #include "GameManager.h"
 
-PlayerController::PlayerController() : _trans(nullptr), _rigidbody(nullptr), _sensibility(0), _pitch(0), _yaw(0), _speed(0), _inMenu(false) {
+PlayerController::PlayerController() :
+	_trans(nullptr),
+	_rigidbody(nullptr),
+	_sensibility(0),
+	_time(0),
+	_timeFalling(0),
+	_pitch(0),
+	_yaw(0),
+	_speed(0),
+	_maxJump(0),
+	_remJump(0),
+	_airborne(false),
+	_inMenu(false) {
 }
 
 bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
@@ -14,10 +26,11 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 	_trans = _myEntity->getComponent<Transform>();
 	_rigidbody = _myEntity->getComponent<Rigidbody>();
 	_pitch = _yaw = 0;
-	_sensibility = 1.0f;
-	_speed = 250.0f;
+	_sensibility = DEFAULT_SENSITIVITY;
+	_speed = DEFAULT_SPEED;
 	_inMenu = false;
-	_maxJump = _remJump = 2;
+	_airborne = false;
+	_maxJump = _remJump = MAX_JUMP;
 	return true;
 }
 
@@ -26,6 +39,10 @@ void PlayerController::update() {
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_ESCAPE)) _inMenu = !_inMenu;
 	if (!_inMenu) {
 		_time += GameManager::GetInstance()->getDeltaTime();
+		if (_airborne) {
+			_timeFalling += GameManager::GetInstance()->getDeltaTime();
+			if (_timeFalling >= TIME_ALIVE_FALLING) playerDead();
+		}
 		Ogre::RenderWindow* win = OgreMotor::GetInstance()->getRenderWindow();
 		Vector2<int> center(win->getWidth() / 2, win->getHeight() / 2);
 		Vector2<int> dir = Input::GetInstance()->getMousePos() - center;
@@ -79,9 +96,10 @@ void PlayerController::fixedUpdate() {
 }
 
 void PlayerController::restoreJumps() {
+	_airborne = false;
 	_remJump = _maxJump;
 }
 
 void PlayerController::playerDead() {
-	GameManager::GetInstance()->onFinish(_time, false);
+	GameManager::GetInstance()->onFinish(_time);
 }

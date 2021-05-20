@@ -3,7 +3,7 @@ local mapa = {
   gravity="0 -9.8 0",
   entities={
     {
-      name="Sinbad",
+      name="Player",
       id=1,
       components={
         transform={

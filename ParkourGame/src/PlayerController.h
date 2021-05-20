@@ -2,6 +2,11 @@
 #include "Transform.h"
 #include "Rigidbody.h"
 
+const int MAX_JUMP = 2;
+const int TIME_ALIVE_FALLING = 5;
+const int DEFAULT_SENSITIVITY = 1.0;
+const int DEFAULT_SPEED = 250;
+
 class PlayerController : public Component {
 public:
 	PlayerController();
@@ -43,6 +48,11 @@ public:
 	/// </summary>
 	void restoreJumps();
 
+	/// <summary>
+	/// Se avisa cuando el jugador deja de tocar el suelo.
+	/// </summary>
+	void becomesAirborne() { _airborne = true; _timeFalling = 0; };
+
 protected:
 	Transform* _trans;
 	Rigidbody* _rigidbody;
@@ -53,4 +63,7 @@ protected:
 
 	int _maxJump;
 	int _remJump;
+
+	bool _airborne = false;
+	float _timeFalling; //Tiempo que lleva cayendo el jugador
 };

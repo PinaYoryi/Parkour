@@ -22,12 +22,7 @@ void DroneAI::update() {
 }
 
 void DroneAI::onCollisionStart(Entity* other) { 
-	/*if (other->hasComponent<PlayerController>()) {
-		other->getComponent<PlayerController>()->playerDead();*/
-	if (other->getName()=="Sinbad") {
-#if (defined _DEBUG)
-		std::cout << "Jugador muere\n";
-#endif
-		GameManager::GetInstance()->onFinish(0.0, false);
-	}
+	if (other->getName() == "Player") {
+		other->getComponent<PlayerController>()->playerDead();
+	} //Esto hay que mirar que funcione
 }

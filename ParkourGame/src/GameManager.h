@@ -27,7 +27,7 @@ public:
 	/// <summary>
 	/// Termina la partida. Cambia a la escena pertienente y guarda el tiempo que ha durado la partida.
 	/// </summary>
-	void onFinish(float time, bool win);
+	void onFinish(float time);
 
 	/// <summary>
 	/// Carga una escena teniendo en cuenta si es un menú de pausa o no
