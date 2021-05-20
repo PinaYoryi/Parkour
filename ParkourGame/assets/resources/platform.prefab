@@ -1,38 +1,32 @@
 local prefab = { 
-    name="Bullet",
-    id=10,
+    name="Platform",
+    id=11,
     components={
         transform={
-            position="0,0,0",
+            position="0,-100,0",
             rotation="0,0,0",
-            scale="0.01,0.01,0.01",
+            scale="0.75,0.1,0.75",
             parent="-1"
         },
         renderer={
-            mesh="sphere.mesh",
+            mesh="cube.mesh",
             material="",
             visible="true"
         },
-        dronmissile={
-
-        },
-        basicai={
-          step="300",
-          threshold="0.01",
-          thresholdRot="0.1",
-          stepRot="0.0002"
-        },
-        lifetime={
-          life="7"
-        },
         rigidbody={
           shape="0",
-          mass="1",
+          mass="0",
           inertia="0,0,0",
           restitution="0.2",
           damping="0.2,0.2",
           trigger="false",
-          kinematic="true"
+          kinematic="false"
+        },
+        lifetime={
+          life="10"
+        },
+        floor={
+          
         }
     }
 }

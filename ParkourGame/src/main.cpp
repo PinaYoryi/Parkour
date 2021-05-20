@@ -10,6 +10,7 @@
 #include "Floor.h"
 #include "GameManager.h"
 #include "PlayerController.h"
+#include "LevelBuilder.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -27,6 +28,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<ShootingAI>("shotai");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<PlayerController>("playercontroller");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<LevelBuilder>("levelbuilder");
 
     GameManager::Init();
 
@@ -40,7 +42,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
         return -1;
     }
 
-    if (!motor.launch("myscript.lua")) {
+    if (!motor.launch("level.lua")) {
 #if (defined _DEBUG)
         std::cerr << "\nError en launch\n";
 #endif
