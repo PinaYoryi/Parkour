@@ -10,9 +10,14 @@ public:
 protected:
 private:
 	std::string _platfromPrefab;	// Plataforma que pondrá
+	std::string _turretPrefab;		// Torretas que pondrá
+	std::string	_dronePrefab;		// Drones que pondrá
 	Vector3<> _lastP;				// Posición de la última plataforma puesta
 	Vector3<> _lastR;				// Rotación de la última plataforma puesta
 
 	float _mTime;					// Tiempo máximo entre plataformas
 	float _cTime;					// Tiempo restante entre plataformas
+
+	float _enemyChance;				// Probabilidad de generar enemigo
+	float _turretChance;			// Probabilidad de generar torreta
 };

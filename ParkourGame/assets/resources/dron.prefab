@@ -1,0 +1,35 @@
+local prefab = { 
+    name="Turret",
+    id=8,
+    components={
+    transform={
+            position="0,40,0",
+            rotation="0,90,0",
+            scale="1,1,1",
+            parent="-1"
+        },
+        renderer={
+            mesh="Sinbad.mesh",
+            material="",
+            visible="true"
+        },
+        rigidbody={
+            shape="0",
+            mass="54",
+            inertia="0,0,0",
+            restitution="0.2",
+            damping="0.2,0.2",
+            trigger="false",
+            kinematic="true"
+        },
+        shotai={
+            objective="1",
+            proyectile="bala.prefab",
+            rof="3"
+        }
+    }
+}
+
+function GetPrefab()
+    return prefab
+end

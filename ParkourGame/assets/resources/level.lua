@@ -88,9 +88,9 @@ local mapa = {
         floor={
 
         },
-        lifetime={
-          life="12"
-        },
+        --lifetime={
+        --  life="12"
+        --},
       }
     },
     {
@@ -100,7 +100,11 @@ local mapa = {
         levelbuilder={
           platformprefab="platform.prefab",
           lastplatform="4",
-          time="3.5"
+          time="3.5",
+          turretprefab="torreta.prefab",
+          dronprefab="torreta.prefab",
+          enemychance="50",
+          turretchance="50"
         }
       }
     }
