@@ -7,10 +7,10 @@ bool DronMissile::init(const std::map<std::string, std::string>& mapa) {
 }
 
 void DronMissile::onCollisionStart(Entity* other) {
-	if (other->getName() != "Drone") {
+	if (other->getName() != "Turret") {
 		if (other->getName() == "Player") {
 			other->getComponent<PlayerController>()->playerDead();
 		}
-		//SceneManager::GetInstance()->addEntityToRemove(_myEntity);
+		SceneManager::GetInstance()->addEntityToRemove(_myEntity);	// No hace nada (???)
 	}
 }

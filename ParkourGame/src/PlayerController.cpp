@@ -56,7 +56,7 @@ void PlayerController::update() {
 		else if (_yaw < -180) _yaw += 360;
 
 		Vector3<> gravity = _rigidbody->getGravity().normalized();
-		_trans->setRotation(Quaternion::Euler({ _pitch + (float)gravity.angleDegrees({0,-1,0}), _yaw - (float)gravity.angleDegrees({0,-1,0}),  0 }));
+		_trans->setLocalRotation(Quaternion::Euler({ _pitch, _yaw,  0 }));
 		Input::GetInstance()->setMousePos(center);
 	}
 }

@@ -11,9 +11,8 @@ bool Floor::init(const std::map<std::string, std::string>& mapa) {
 
 void Floor::onCollisionStart(Entity* other) {
 	if (other->getName() == "Player") {
-		Vector3<> dir = _myEntity->getComponent<Transform>()->rotation().toVector();
-		dir = dir.rotate(90, { -1, 0, 0 });
-		other->getComponent<Rigidbody>()->setGravity(dir.normalized() * 9.8);
+		float dir = _myEntity->getComponent<Transform>()->rotation().toEuler().z;
+		other->getComponent<Rigidbody>()->setGravity({ (float)sin(dir * M_PI / 180.0f) * 9.8f, -(float)cos(dir * M_PI / 180.0f) * 9.8f, 0.0f });
 		other->getComponent<PlayerController>()->restoreJumps();
 	}
 }
@@ -21,5 +20,6 @@ void Floor::onCollisionStart(Entity* other) {
 void Floor::onCollisionEnd(Entity* other) {
 	if (other->getName() == "Player") {
 		other->getComponent<PlayerController>()->becomesAirborne();
+		other->getComponent<Rigidbody>()->setGravity({ 0.0f, -9.8f, 0.0f });
 	}
 }

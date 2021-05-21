@@ -7,7 +7,7 @@ local mapa = {
       id=1,
       components={
         transform={
-          position="0,0,0",
+          position="0,-90,0",
           rotation="0,0,0",
           scale="1,1,1",
           parent="-1"
@@ -88,9 +88,9 @@ local mapa = {
         floor={
 
         },
-        --lifetime={
-        --  life="12"
-        --},
+        lifetime={
+          life="12"
+        },
       }
     },
     {

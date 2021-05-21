@@ -19,7 +19,7 @@ float GameManager::getDeltaTime() {
 
 void GameManager::onFinish(float time) {
 	_secondsLasted = time;
-	toScene("aitest.lua");
+	toScene("level.lua");
 }
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)

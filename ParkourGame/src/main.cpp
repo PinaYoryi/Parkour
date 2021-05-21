@@ -21,7 +21,6 @@ int main() {
 int WINAPI
 WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdShow) {
 #endif
-    std::cout << "Hello World!\n";
     ComponentFactoryRegistrations::ComponentFactoryRegistration<Lifetime>("lifetime");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<Floor>("floor");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DroneAI>("droneai");
@@ -29,6 +28,8 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<PlayerController>("playercontroller");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<LevelBuilder>("levelbuilder");
+
+    srand(time(NULL));
 
     GameManager::Init();
 
