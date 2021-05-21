@@ -22,10 +22,15 @@ local prefab = {
             trigger="false",
             kinematic="true"
         },
-        shotai={
-            objective="1",
-            proyectile="bala.prefab",
-            rof="3"
+        basicai={
+            step="150",
+            threshold="0.5",
+            thresholdRot="0.1",
+            stepRot="0.005"
+        },
+        droneai={
+            strength="250",
+            objective="1"
         }
     }
 }

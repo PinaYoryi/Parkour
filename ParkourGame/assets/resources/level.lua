@@ -102,7 +102,7 @@ local mapa = {
           lastplatform="4",
           time="3.5",
           turretprefab="torreta.prefab",
-          dronprefab="torreta.prefab",
+          dronprefab="dron.prefab",
           enemychance="50",
           turretchance="50"
         }
