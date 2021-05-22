@@ -64,6 +64,8 @@ protected:
 	int _maxJump;	// Máximo número de saltos
 	int _remJump;	// Saltos que le quedan
 
+	int _jumpStr;	// Potencia del salto
+
 	bool _airborne = false;
 	float _timeFalling; //Tiempo que lleva cayendo el jugador
 };

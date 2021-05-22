@@ -39,7 +39,8 @@ local mapa = {
         playercontroller={
           sensibility="1",
           speed="175",
-          maxJump="2"
+          maxJump="2",
+          jumpStr="5000"
         }
       }
     },

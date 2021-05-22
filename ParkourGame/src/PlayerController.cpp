@@ -21,7 +21,7 @@ PlayerController::PlayerController() :
 }
 
 bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
-	if (mapa.find("sensibility") == mapa.end() || mapa.find("speed") == mapa.end() || mapa.find("maxJump") == mapa.end()) return false;
+	if (mapa.find("sensibility") == mapa.end() || mapa.find("speed") == mapa.end() || mapa.find("maxJump") == mapa.end() || mapa.find("jumpStr") == mapa.end()) return false;
 
 	_trans = _myEntity->getComponent<Transform>();
 	_rigidbody = _myEntity->getComponent<Rigidbody>();
@@ -39,6 +39,9 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 
 	s = mapa.at("maxJump");
 	_maxJump = _remJump = std::stoi(s);
+
+	s = mapa.at("jumpStr");
+	_jumpStr = std::stoi(s);
 
 	return true;
 }
@@ -100,7 +103,7 @@ void PlayerController::fixedUpdate() {
 	}
 
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_SPACE) && _remJump-- > 0) {
-		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -5000);
+		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -_jumpStr);
 	}
 }
 
