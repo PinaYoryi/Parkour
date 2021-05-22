@@ -37,6 +37,9 @@ local mapa = {
           visible="false"
         },
         playercontroller={
+          sensibility="1",
+          speed="175",
+          maxJump="2"
         }
       }
     },

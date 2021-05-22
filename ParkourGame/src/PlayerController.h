@@ -56,13 +56,13 @@ public:
 protected:
 	Transform* _trans;
 	Rigidbody* _rigidbody;
-	float _pitch, _yaw, _sensibility;
-	float _time; //Tiempo que ha durado vivo el jugador
-	float _speed;
-	bool _inMenu;
+	float _pitch, _yaw, _sensibility;	// Rotaciones de la cámara
+	float _time;	//	Tiempo que ha durado vivo el jugador
+	float _speed;	// Velocidad cuando te mueves
+	bool _inMenu;	// Si está en menú
 
-	int _maxJump;
-	int _remJump;
+	int _maxJump;	// Máximo número de saltos
+	int _remJump;	// Saltos que le quedan
 
 	bool _airborne = false;
 	float _timeFalling; //Tiempo que lleva cayendo el jugador
