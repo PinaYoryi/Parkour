@@ -37,6 +37,10 @@ local mapa = {
           visible="false"
         },
         playercontroller={
+          sensibility="1",
+          speed="175",
+          maxJump="2",
+          jumpStr="5000"
         }
       }
     },
@@ -73,7 +77,7 @@ local mapa = {
         },
         renderer={
           mesh="cube.mesh",
-          material="",
+          material="metalPlatform",
           visible="true"
         },
         rigidbody={
@@ -102,7 +106,7 @@ local mapa = {
           lastplatform="4",
           time="3.5",
           turretprefab="torreta.prefab",
-          dronprefab="torreta.prefab",
+          dronprefab="dron.prefab",
           enemychance="50",
           turretchance="50"
         }

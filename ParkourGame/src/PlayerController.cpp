@@ -21,16 +21,28 @@ PlayerController::PlayerController() :
 }
 
 bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
-	//TODO: rellenar init con los valores del mapa
-	//El try es necesario para que no explote la aplicacion si no hay camara que usar
+	if (mapa.find("sensibility") == mapa.end() || mapa.find("speed") == mapa.end() || mapa.find("maxJump") == mapa.end() || mapa.find("jumpStr") == mapa.end()) return false;
+
 	_trans = _myEntity->getComponent<Transform>();
 	_rigidbody = _myEntity->getComponent<Rigidbody>();
+
 	_pitch = _yaw = 0;
-	_sensibility = DEFAULT_SENSITIVITY;
-	_speed = DEFAULT_SPEED;
+
+	std::string s = mapa.at("sensibility");
+	_sensibility = std::stof(s);
+
+	s = mapa.at("speed");
+	_speed = std::stof(s);
+
 	_inMenu = false;
 	_airborne = false;
-	_maxJump = _remJump = MAX_JUMP;
+
+	s = mapa.at("maxJump");
+	_maxJump = _remJump = std::stoi(s);
+
+	s = mapa.at("jumpStr");
+	_jumpStr = std::stoi(s);
+
 	return true;
 }
 
@@ -91,7 +103,7 @@ void PlayerController::fixedUpdate() {
 	}
 
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_SPACE) && _remJump-- > 0) {
-		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -5000);
+		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -_jumpStr);
 	}
 }
 

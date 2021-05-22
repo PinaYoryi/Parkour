@@ -16,9 +16,9 @@ bool DroneAI::init(const std::map<std::string, std::string>& mapa) {
 }
 
 void DroneAI::update() {
-	_myEntity->getComponent<BasicAI>()->MoveTo(_objective->getComponent<Transform>()->position());
 	_myEntity->getComponent<BasicAI>()->setStep(_strength);
-	_myEntity->getComponent<BasicAI>()->RotateTo(_objective->getComponent<Transform>()->rotation().toEuler());
+	_myEntity->getComponent<BasicAI>()->MoveTo(_objective->getComponent<Transform>()->position());
+	_myEntity->getComponent<BasicAI>()->RotateTo(_objective->getComponent<Transform>()->position());
 }
 
 void DroneAI::onCollisionStart(Entity* other) { 

@@ -22,14 +22,17 @@ bool ShootingAI::init(const std::map<std::string, std::string>& mapa) {
 
 void ShootingAI::update() {
 	_cooldown -= MotorLoop::GetInstance()->getDeltaTime();
+
+	Vector3<> ini = _myEntity->getComponent<Transform>()->position();	// Inicio del trayecto
+	Vector3<> fin = _objective->getComponent<Transform>()->position();	// Final del trayecto
+	_myEntity->getComponent<BasicAI>()->RotateTo(fin - ini);
+
 	if (_cooldown < 0) {;
 		_cooldown = _RoF;
 
 		Entity* bala = Entity::instantiate(_bala, _myEntity->getComponent<Transform>()->position());
 
-		Vector3<> ini = _myEntity->getComponent<Transform>()->position();	// Inicio del trayecto
-		Vector3<> fin = _objective->getComponent<Transform>()->position();	// FInal del trayecto
-		Vector3<> tra = (fin - ini).normalize();							// Dirección del trayecto
+		Vector3<> tra = (fin - ini).normalize();						// Dirección del trayecto
 		tra *= 2;															
 
 		bala->getComponent<Rigidbody>()->setPosition(ini + tra);

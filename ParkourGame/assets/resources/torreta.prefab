@@ -28,8 +28,14 @@ local prefab = {
             rof="2.5"
         },
         lifetime={
-          life="8"
+            life="8"
         },
+        basicai={
+            step="150",
+            threshold="0.5",
+            thresholdRot="0.1",
+            stepRot="0.005"
+        }
     }
 }
 
