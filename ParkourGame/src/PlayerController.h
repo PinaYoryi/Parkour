@@ -17,21 +17,12 @@ public:
 	/// </summary>
 	bool init(const std::map<std::string, std::string>& mapa) override;
 
-	/// <summary>
-	/// Mueve el componente c�mara de la entidad que tiene esta clase en
-	/// base a los movimientos del raton
-	/// </summary>
 	void update() override;
 
 	/// <summary>
 	/// Movimientos f�sicos del jugador
 	/// </summary>
 	void fixedUpdate() override;
-
-	/// <summary>
-	/// Fija la sensibilidad del movimiento de la camara
-	/// </summary>
-	void setSensibility(float sen) { _sensibility = sen; }
 
 	/// <summary>
 	/// Fija la velocidad de movimiento del jugador
@@ -56,7 +47,6 @@ public:
 protected:
 	Transform* _trans;
 	Rigidbody* _rigidbody;
-	float _pitch, _yaw, _sensibility;	// Rotaciones de la cámara
 	float _time;	//	Tiempo que ha durado vivo el jugador
 	float _speed;	// Velocidad cuando te mueves
 	bool _inMenu;	// Si está en menú
