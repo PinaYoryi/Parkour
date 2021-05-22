@@ -21,6 +21,28 @@ local mapa = {
           trigger="false",
           kinematic="false"
         },
+        renderer={
+          mesh="Sinbad.mesh",
+          material="",
+          visible="false"
+        },
+        playercontroller={
+          speed="175",
+          maxJump="2",
+          jumpStr="5000"
+        }
+      }
+    },
+    {
+      name="Camera",
+      id=6,
+      components={
+        transform={
+          position="0,0,0",
+          rotation="0,0,0",
+          scale="1,1,1",
+          parent="1"
+        },
         camera={
           near="0.1",
           far="1000",
@@ -31,16 +53,8 @@ local mapa = {
           viewport="0,0,1,1",
           color="0,0,0"
         },
-        renderer={
-          mesh="Sinbad.mesh",
-          material="",
-          visible="false"
-        },
-        playercontroller={
-          sensibility="1",
-          speed="175",
-          maxJump="2",
-          jumpStr="5000"
+        cameracontroller={
+          sensibility="1"
         }
       }
     },

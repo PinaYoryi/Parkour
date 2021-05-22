@@ -11,6 +11,7 @@
 #include "GameManager.h"
 #include "PlayerController.h"
 #include "LevelBuilder.h"
+#include "CameraController.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -28,6 +29,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<DronMissile>("dronmissile");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<PlayerController>("playercontroller");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<LevelBuilder>("levelbuilder");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<CameraController>("cameracontroller");
 
     srand(time(NULL));
 
