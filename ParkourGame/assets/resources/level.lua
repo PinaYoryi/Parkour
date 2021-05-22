@@ -73,7 +73,7 @@ local mapa = {
         },
         renderer={
           mesh="cube.mesh",
-          material="",
+          material="metalPlatform",
           visible="true"
         },
         rigidbody={
