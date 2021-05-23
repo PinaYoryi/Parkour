@@ -25,7 +25,6 @@ public:
 private:
 	float _pitch, _yaw, _sensibility;	// Rotaciones de la cámara
 
-	bool _inMenu;	// Si está en menú
 
 	Transform* _trans;
 };

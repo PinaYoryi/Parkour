@@ -45,7 +45,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
         return -1;
     }
 
-    if (!motor.launch("level.lua")) {
+    if (!motor.launch("menuprincipal.lua")) {
 #if (defined _DEBUG)
         std::cerr << "\nError en launch\n";
 #endif

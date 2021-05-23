@@ -4,7 +4,6 @@
 #include "LevelBuilder.h"
 #include "MotorLoop.h"
 #include <random>
-
 LevelBuilder::LevelBuilder() {}
 
 bool LevelBuilder::init(const std::map<std::string, std::string>& mapa) {

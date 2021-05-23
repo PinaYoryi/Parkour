@@ -26,21 +26,19 @@ bool CameraController::init(const std::map<std::string, std::string>& mapa)
 
 void CameraController::update() {
 	if (!_active) return;
-	if (Input::GetInstance()->keyDown(SDL_SCANCODE_ESCAPE)) _inMenu = !_inMenu;
-	if (!_inMenu) {
-		Ogre::RenderWindow* win = OgreMotor::GetInstance()->getRenderWindow();
-		Vector2<int> center(win->getWidth() / 2, win->getHeight() / 2);
-		Vector2<int> dir = Input::GetInstance()->getMousePos() - center;
+	Ogre::RenderWindow* win = OgreMotor::GetInstance()->getRenderWindow();
+	Vector2<int> center(win->getWidth() / 2, win->getHeight() / 2);
+	Vector2<int> dir = Input::GetInstance()->getMousePos() - center;
 
-		_pitch -= dir.y * _sensibility;
-		if (_pitch > 90) _pitch = 90;
-		else if (_pitch < -90) _pitch = -90;
+	_pitch -= dir.y * _sensibility;
+	if (_pitch > 90) _pitch = 90;
+	else if (_pitch < -90) _pitch = -90;
 
-		_yaw -= dir.x * _sensibility;
-		if (_yaw >= 180) _yaw -= 360;
-		else if (_yaw < -180) _yaw += 360;
+	_yaw -= dir.x * _sensibility;
+	if (_yaw >= 180) _yaw -= 360;
+	else if (_yaw < -180) _yaw += 360;
 
-		_trans->setLocalRotation(Quaternion::Euler({ _pitch, _yaw,  0 }));
-		Input::GetInstance()->setMousePos(center);
-	}
+	_trans->setLocalRotation(Quaternion::Euler({ _pitch, _yaw,  0 }));
+	Input::GetInstance()->setMousePos(center);
+	
 }

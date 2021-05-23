@@ -4,7 +4,6 @@
 #include "OgreMotor.h"
 #include <OgreRenderWindow.h>
 #include "GameManager.h"
-
 PlayerController::PlayerController() :
 	_trans(nullptr),
 	_rigidbody(nullptr),
@@ -13,8 +12,8 @@ PlayerController::PlayerController() :
 	_speed(0),
 	_maxJump(0),
 	_remJump(0),
-	_airborne(false),
-	_inMenu(false) {
+	_airborne(false)
+{
 }
 
 bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
@@ -26,7 +25,6 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 	std::string s = mapa.at("speed");
 	_speed = std::stof(s);
 
-	_inMenu = false;
 	_airborne = false;
 
 	s = mapa.at("maxJump");
@@ -40,15 +38,17 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 
 void PlayerController::update()
 {
-	if (!_inMenu) {
-		_time += GameManager::GetInstance()->getDeltaTime();
-		if (_airborne) {
-			_timeFalling += GameManager::GetInstance()->getDeltaTime();
-			if (_timeFalling >= TIME_ALIVE_FALLING) playerDead();
-		}
 
-
+	_time += GameManager::GetInstance()->getDeltaTime();
+	if (_airborne) {
+		_timeFalling += GameManager::GetInstance()->getDeltaTime();
+		if (_timeFalling >= TIME_ALIVE_FALLING) playerDead();
 	}
+	if (Input::GetInstance()->keyDown(SDL_SCANCODE_ESCAPE)) {
+		Entity::instantiate("menupausa.prefab");
+	}
+
+
 }
 
 void PlayerController::fixedUpdate() {

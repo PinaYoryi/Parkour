@@ -1,0 +1,44 @@
+local prefab = { 
+    name="MenuPrincipal",
+    id=10,
+    components={
+    {
+     	name="Boton",
+    	id=5,
+         components={
+            button={
+                text="Continuar",
+                position="0.3,0.3",
+                size="100,100",
+                name="botonContinuar",
+                type="RESUME",
+                nextScene=""
+            }   	
+     	},
+     	components={
+            button={
+                text="Menu",
+                position="0.3,0.5",
+                size="100,100",
+                name="botonSalir",
+                type="CHANGE_SCENE",
+                nextScene="menuprincipal.lua"
+            }   	
+     	},        
+         components={
+            button={
+                text="Salir",
+                position="0.3,0.8",
+                size="100,100",
+                name="botonContinuar",
+                type="RESUME",
+                nextScene=""
+            }   	
+     	}
+      }
+    }
+}
+
+function GetPrefab()
+    return prefab
+end

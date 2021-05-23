@@ -49,7 +49,6 @@ protected:
 	Rigidbody* _rigidbody;
 	float _time;	//	Tiempo que ha durado vivo el jugador
 	float _speed;	// Velocidad cuando te mueves
-	bool _inMenu;	// Si está en menú
 
 	int _maxJump;	// Máximo número de saltos
 	int _remJump;	// Saltos que le quedan

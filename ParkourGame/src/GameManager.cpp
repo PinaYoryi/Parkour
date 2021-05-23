@@ -24,12 +24,15 @@ void GameManager::onFinish(float time) {
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)
 	{
-	case Continues:
+	case Continues://continuar la escena pausada (elimina las entidades no pausadas)
 		SceneManager::GetInstance()->continueScene();
 		break;
-	case Pauses:
+	case Pauses://pausar la escena y cargar un menu
 		SceneManager::GetInstance()->pauseScene();
+
 		break;
+	case Neutral://cargar otra escena
+		SceneManager::GetInstance()->newScene(scene);
+
 	}
-	SceneManager::GetInstance()->newScene(scene);
 }
