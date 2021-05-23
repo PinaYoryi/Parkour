@@ -35,6 +35,11 @@ local prefab = {
             threshold="0.5",
             thresholdRot="0.1",
             stepRot="0.005"
+        },
+        audiosource={
+            sound="NLsound.mp3",
+            volume="2",
+            velocity="0,0,0"
         }
     }
 }

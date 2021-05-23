@@ -30,6 +30,9 @@ local mapa = {
           speed="175",
           maxJump="2",
           jumpStr="5000"
+        },
+        audiolistener={
+          position="0 0 0"
         }
       }
     },

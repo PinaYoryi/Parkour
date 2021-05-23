@@ -1,0 +1,11 @@
+material eneergyBall
+{
+    technique
+    {
+        pass
+        {
+            ambient 1.0 0.0 0.0
+            diffuse 0.2 0.0 0.8                 
+        }
+    }
+}

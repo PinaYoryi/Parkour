@@ -2,6 +2,8 @@
 #include "SceneManager.h"
 #include "BasicAI.h"
 #include "MotorLoop.h" 
+#include "Entity.h"
+#include "AudioSource.h"
 
 bool ShootingAI::init(const std::map<std::string, std::string>& mapa) {
 	if (mapa.find("proyectile") == mapa.end() || mapa.find("objective") == mapa.end() || mapa.find("rof") == mapa.end()) return false;
@@ -25,7 +27,7 @@ void ShootingAI::update() {
 
 	Vector3<> ini = _myEntity->getComponent<Transform>()->position();	// Inicio del trayecto
 	Vector3<> fin = _objective->getComponent<Transform>()->position();	// Final del trayecto
-	_myEntity->getComponent<BasicAI>()->RotateTo(fin - ini);
+	//_myEntity->getComponent<BasicAI>()->RotateTo(fin - ini);
 
 	if (_cooldown < 0) {;
 		_cooldown = _RoF;
@@ -39,5 +41,7 @@ void ShootingAI::update() {
 
 		tra *= 500;	// Hasta el "infinito"
 		bala->getComponent<BasicAI>()->MoveTo(ini + tra);
+
+		_myEntity->getComponent<AudioSource>()->playSound3D();
 	}
 }
