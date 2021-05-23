@@ -10,7 +10,7 @@ local prefab = {
         },
         renderer={
             mesh="sphere.mesh",
-            material="",
+            material="eneergyBall",
             visible="true"
         },
         dronmissile={
