@@ -24,7 +24,7 @@ bool CameraController::init(const std::map<std::string, std::string>& mapa)
 	return true;
 }
 
-void CameraController::update() {
+void CameraController::update() { 
 	if (!_active) return;
 	Ogre::RenderWindow* win = OgreMotor::GetInstance()->getRenderWindow();
 	Vector2<int> center(win->getWidth() / 2, win->getHeight() / 2);

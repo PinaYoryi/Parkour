@@ -33,6 +33,8 @@ if not exist ../../ParkourGame/bin/CEGUIOgreRenderer-0.dll goto copydependencies
 if not exist ../../ParkourGame/bin/CEGUIOgreRenderer-0_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/CEGUIExpatParser.dll goto copydependencies
 if not exist ../../ParkourGame/bin/CEGUIExpatParser_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUICoreWindowRendererSet.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUICoreWindowRendererSet_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/freetype.dll goto copydependencies
 if not exist ../../ParkourGame/bin/freetype_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/glew.dll goto copydependencies
@@ -87,6 +89,8 @@ copy /Y CEGUIOgreRenderer-0.dll "../../ParkourGame/bin/CEGUIOgreRenderer-0.dll"
 copy /Y CEGUIOgreRenderer-0_d.dll "../../ParkourGame/bin/CEGUIOgreRenderer-0_d.dll"
 copy /Y CEGUIExpatParser.dll "../../ParkourGame/bin/CEGUIExpatParser.dll"
 copy /Y CEGUIExpatParser_d.dll "../../ParkourGame/bin/CEGUIExpatParser_d.dll"
+copy /Y CEGUICoreWindowRendererSet.dll "../../ParkourGame/bin/CEGUICoreWindowRendererSet.dll"
+copy /Y CEGUICoreWindowRendererSet_d.dll "../../ParkourGame/bin/CEGUICoreWindowRendererSet_d.dll"
 copy /Y freetype.dll "../../ParkourGame/bin/freetype.dll"
 copy /Y freetype_d.dll "../../ParkourGame/bin/freetype_d.dll"
 copy /Y glew.dll "../../ParkourGame/bin/glew.dll"

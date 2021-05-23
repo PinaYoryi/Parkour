@@ -1,6 +1,7 @@
 #include "GameManager.h"
 #include "MotorLoop.h"
 #include "SceneManager.h"
+#include "Gui.h"
 
 GameManager* GameManager::_singleton = nullptr;
 
@@ -26,13 +27,15 @@ void GameManager::toScene(std::string scene, sceneState state) {
 	{
 	case Continues://continuar la escena pausada (elimina las entidades no pausadas)
 		SceneManager::GetInstance()->continueScene();
+		//Gui::GetInstance()->mouseVisible(false);
 		break;
 	case Pauses://pausar la escena y cargar un menu
 		SceneManager::GetInstance()->pauseScene();
-
+		//Gui::GetInstance()->mouseVisible(true);
 		break;
 	case Neutral://cargar otra escena
 		SceneManager::GetInstance()->newScene(scene);
 
 	}
 }
+#include "ButtonComponent.cpp"

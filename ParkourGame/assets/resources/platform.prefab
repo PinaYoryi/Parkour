@@ -1,6 +1,7 @@
 local prefab = { 
     name="Platform",
     id=11,
+    cursor=0,
     components={
         transform={
             position="0,-100,0",

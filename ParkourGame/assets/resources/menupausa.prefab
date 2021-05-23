@@ -1,6 +1,8 @@
 local prefab = { 
     name="MenuPrincipal",
     id=10,
+    cursor=1,
+    cursor=0,
     components={
     {
      	name="Boton",

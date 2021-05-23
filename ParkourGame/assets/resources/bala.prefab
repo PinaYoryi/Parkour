@@ -1,6 +1,7 @@
 local prefab = { 
     name="Bullet",
     id=10,
+    cursor=0,
     components={
         transform={
             position="0,0,0",
