@@ -6,7 +6,7 @@
 bool ShootingAI::init(const std::map<std::string, std::string>& mapa) {
 	if (mapa.find("proyectile") == mapa.end() || mapa.find("objective") == mapa.end() || mapa.find("rof") == mapa.end()) return false;
 
-	std::string s = mapa.at("proyectile");
+	std::string s = mapa.at("proyectile"); 
 	_bala = s;
 
 	s = mapa.at("objective");
