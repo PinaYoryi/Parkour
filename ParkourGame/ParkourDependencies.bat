@@ -26,6 +26,30 @@ if not exist ../../ParkourGame/bin/RenderSystem_Direct3D11.dll goto copydependen
 if not exist ../../ParkourGame/bin/RenderSystem_Direct3D11_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/SDL2.dll goto copydependencies
 if not exist ../../ParkourGame/bin/zlib.dll goto copydependencies
+
+if not exist ../../ParkourGame/bin/CEGUIBase-0.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUIBase-0_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUIOgreRenderer-0.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUIOgreRenderer-0_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUIExpatParser.dll goto copydependencies
+if not exist ../../ParkourGame/bin/CEGUIExpatParser_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/freetype.dll goto copydependencies
+if not exist ../../ParkourGame/bin/freetype_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/glew.dll goto copydependencies
+if not exist ../../ParkourGame/bin/glew_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/glfw.dll goto copydependencies
+if not exist ../../ParkourGame/bin/glfw_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/jpeg.dll goto copydependencies
+if not exist ../../ParkourGame/bin/jpeg_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/libexpat.dll goto copydependencies
+if not exist ../../ParkourGame/bin/libexpat_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/libpng.dll goto copydependencies
+if not exist ../../ParkourGame/bin/libpng_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/pcre.dll goto copydependencies
+if not exist ../../ParkourGame/bin/pcre_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/SILLY.dll goto copydependencies
+if not exist ../../ParkourGame/bin/SILLY_d.dll goto copydependencies
+
 goto endcopy
 
 :copydependencies
@@ -56,6 +80,30 @@ copy /Y RenderSystem_Direct3D11.dll "../../ParkourGame/bin/RenderSystem_Direct3D
 copy /Y RenderSystem_Direct3D11_d.dll "../../ParkourGame/bin/RenderSystem_Direct3D11_d.dll"
 copy /Y SDL2.dll "../../ParkourGame/bin/SDL2.dll"
 copy /Y zlib.dll "../../ParkourGame/bin/zlib.dll"
+
+copy /Y CEGUIBase-0.dll "../../ParkourGame/bin/CEGUIBase-0.dll"
+copy /Y CEGUIBase-0_d.dll "../../ParkourGame/bin/CEGUIBase-0_d.dll"
+copy /Y CEGUIOgreRenderer-0.dll "../../ParkourGame/bin/CEGUIOgreRenderer-0.dll"
+copy /Y CEGUIOgreRenderer-0_d.dll "../../ParkourGame/bin/CEGUIOgreRenderer-0_d.dll"
+copy /Y CEGUIExpatParser.dll "../../ParkourGame/bin/CEGUIExpatParser.dll"
+copy /Y CEGUIExpatParser_d.dll "../../ParkourGame/bin/CEGUIExpatParser_d.dll"
+copy /Y freetype.dll "../../ParkourGame/bin/freetype.dll"
+copy /Y freetype_d.dll "../../ParkourGame/bin/freetype_d.dll"
+copy /Y glew.dll "../../ParkourGame/bin/glew.dll"
+copy /Y glew_d.dll "../../ParkourGame/bin/glew_d.dll"
+copy /Y glfw.dll "../../ParkourGame/bin/glfw.dll"
+copy /Y glfw_d.dll "../../ParkourGame/bin/glfw_d.dll"
+copy /Y jpeg.dll "../../ParkourGame/bin/jpeg.dll"
+copy /Y jpeg_d.dll "../../ParkourGame/bin/jpeg_d.dll"
+copy /Y libexpat.dll "../../ParkourGame/bin/libexpat.dll"
+copy /Y libexpat_d.dll "../../ParkourGame/bin/libexpat_d.dll"
+copy /Y libpng.dll "../../ParkourGame/bin/libpng.dll"
+copy /Y libpng_d.dll "../../ParkourGame/bin/libpng_d.dll"
+copy /Y pcre.dll "../../ParkourGame/bin/pcre.dll"
+copy /Y pcre_d.dll "../../ParkourGame/bin/pcre_d.dll"
+copy /Y SILLY.dll "../../ParkourGame/bin/SILLY.dll"
+copy /Y SILLY_d.dll "../../ParkourGame/bin/SILLY_d.dll"
+
 :endcopy
 echo fin
 
