@@ -5,6 +5,7 @@
 #include <OgreRenderWindow.h>
 #include "GameManager.h"
 #include "AudioSource.h"
+#include "SceneManager.h"
 
 PlayerController::PlayerController() :
 	_trans(nullptr),
@@ -47,7 +48,9 @@ void PlayerController::update()
 		if (_timeFalling >= TIME_ALIVE_FALLING) playerDead();
 	}
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_ESCAPE)) {
+		SceneManager::GetInstance()->pauseScene();
 		Entity::instantiate("menupausa.prefab");
+
 	}
 
 

@@ -12,19 +12,19 @@ local mapa = {
                 size="100,100",
                 name="botonSalir",
                 type="EXIT",
+                showCursor="true",
                 nextScene=""
-            }   	
-     	},
-         components={
-            button={
-                text="Empezar",
-                position="0.5,15",
-                size="100,100",
-                name="botonEmpezar",
-                type="CHANGE_SCENE",
-                nextScene="level.lua"
-            }   	
-     	},
+            }
+            -- ,
+            -- button={
+            --     text="Empezar",
+            --     position="0.5,15",
+            --     size="100,100",
+            --     name="botonEmpezar",
+            --     type="CHANGE_SCENE",
+            --     nextScene="level.lua"
+            -- }   	
+     	}
       }
     }
 }
