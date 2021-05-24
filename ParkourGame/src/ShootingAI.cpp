@@ -40,7 +40,7 @@ void ShootingAI::update() {
 		bala->getComponent<Rigidbody>()->setPosition(ini + tra);
 
 		tra *= 500;	// Hasta el "infinito"
-		bala->getComponent<BasicAI>()->MoveTo(ini + tra);
+		bala->getComponent<BasicAI>()->moveTo(ini + tra);
 
 		_myEntity->getComponent<AudioSource>()->playSound3D();
 	}

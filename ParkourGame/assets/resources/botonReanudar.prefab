@@ -1,0 +1,26 @@
+local prefab = { 
+    name="BotonReanudar",
+    id=1,
+    cursor=1,
+    components={  
+        transform={
+            position="0,0,0",
+            rotation="0,0,0",
+            scale="0.01,0.01,0.01",
+            parent="-1"
+        },  
+        button={
+            text="Continuar",
+            position="0.3,0.3",
+            size="100,100",
+            name="botonContinuar",
+            type="RESUME",            
+            showCursor="true",            
+            nextScene=""
+        }  
+    }
+}
+
+function GetPrefab()
+    return prefab
+end

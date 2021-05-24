@@ -32,7 +32,7 @@ public:
 	/// <summary>
 	/// Carga una escena teniendo en cuenta si es un menú de pausa o no
 	/// </summary>
-	void toScene(std::string scene, sceneState state = Neutral);
+	void toScene(std::string scene = "", sceneState state = Neutral);
 
 	/// <summary>
 	/// Devuelve el valor de deltaTime
@@ -40,6 +40,7 @@ public:
 	float getDeltaTime();
 
 	float getLastedTime() { return _secondsLasted; }
+
 
 protected:
 	static GameManager* _singleton;
