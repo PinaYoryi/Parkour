@@ -38,4 +38,3 @@ void GameManager::toScene(std::string scene, sceneState state) {
 
 	}
 }
-#include "ButtonComponent.cpp"
