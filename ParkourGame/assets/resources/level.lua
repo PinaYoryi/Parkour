@@ -144,7 +144,31 @@ local mapa = {
           parent="-1"
         }
       }
-    }
+    },
+    {
+      name="skyBox",
+      id=6,
+      components={
+        transform={
+          position="0,0,0",
+          rotation="0,0,0",
+          scale="1,1,1",
+          parent="-1"
+        },        
+        skybox={
+          enable="true",
+          planenormal="Z",
+          planepos="20",
+          materialname="sky/space",
+          scale="1",
+          tiling="1",
+          drawfirst="true",
+          bow="10.0",
+          xsegments="10",
+          ysegments="10"
+        }
+      }
+    },
   }
 }
 
