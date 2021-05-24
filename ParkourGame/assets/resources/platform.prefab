@@ -24,7 +24,7 @@ local prefab = {
           kinematic="false"
         },
         lifetime={
-          life="10"
+          life="15"
         },
         floor={
           

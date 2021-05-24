@@ -29,10 +29,15 @@ local mapa = {
         playercontroller={
           speed="175",
           maxJump="2",
-          jumpStr="5000"
+          jumpStr="7200"
         },
         audiolistener={
           position="0 0 0"
+        },
+        audiosource={
+            sound="jump.wav",
+            volume="0.25",
+            velocity="0,0,0"
         }
       }
     },
@@ -110,7 +115,7 @@ local mapa = {
 
         },
         lifetime={
-          life="12"
+          life="20"
         },
       }
     },
@@ -126,6 +131,17 @@ local mapa = {
           dronprefab="dron.prefab",
           enemychance="50",
           turretchance="50"
+        },
+        audiosource={
+          sound="MetalSmack.wav",
+          volume="0.25",
+          velocity="0,0,0"
+        },
+        transform={
+          position="0,0,0",
+          rotation="0,0,0",
+          scale="1,1,1",
+          parent="-1"
         }
       }
     }

@@ -45,7 +45,7 @@ void LevelBuilder::update() {
 		Rigidbody* pRigid = platform->getComponent<Rigidbody>();
 		
 		float posVarX = (rand() % 50) - 25;		// Variación en X
-		float posVarY = (rand() % 5) - 2.5;		// Variación en Y
+		float posVarY = (rand() % 2) - 1;		// Variación en Y
 		float posVarAng = (rand() % 90) - 45;	// variación en ángulo en z
 
 		_lastP = { _lastP.x + posVarX, _lastP.y + posVarY, _lastP.z - 100 };
@@ -64,5 +64,7 @@ void LevelBuilder::update() {
 			pRigid->setPosition({ _lastP.x + (float)sin(dir * M_PI / 180.0f) * 45 , _lastP.y + (float)cos(dir * M_PI / 180.0f) * 45, _lastP.z });
 			pRigid->setRotation(Quaternion::Euler({ _lastR.x, _lastR.y, _lastR.z }));
 		}
+
+		_myEntity->getComponent<AudioSource>()->playSound2D();
 	}
 }

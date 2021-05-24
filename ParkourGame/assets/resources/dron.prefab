@@ -32,6 +32,9 @@ local prefab = {
         droneai={
             strength="250",
             objective="1"
+        },
+        lifetime={
+            life="12"
         }
     }
 }

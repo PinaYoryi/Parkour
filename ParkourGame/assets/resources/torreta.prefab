@@ -28,7 +28,7 @@ local prefab = {
             rof="2.5"
         },
         lifetime={
-            life="8"
+            life="12"
         },
         basicai={
             step="150",
@@ -37,8 +37,8 @@ local prefab = {
             stepRot="0.005"
         },
         audiosource={
-            sound="NLsound.mp3",
-            volume="2",
+            sound="NLsound.mp3", --sound="MagiSmite.wav",
+            volume="0.25",
             velocity="0,0,0"
         }
     }
