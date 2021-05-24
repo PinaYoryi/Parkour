@@ -12,6 +12,7 @@ private:
 	std::string _platfromPrefab;	// Plataforma que pondrá
 	std::string _turretPrefab;		// Torretas que pondrá
 	std::string	_dronePrefab;		// Drones que pondrá
+	Vector3<> _initP;
 	Vector3<> _lastP;				// Posición de la última plataforma puesta
 	Vector3<> _lastR;				// Rotación de la última plataforma puesta
 
