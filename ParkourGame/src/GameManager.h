@@ -46,7 +46,6 @@ protected:
 
 	bool _paused;
 	float _secondsLasted;
-	std::vector<Entity*> _entities;
 
 	GameManager() : _secondsLasted(0), _paused(false) {};
 };
