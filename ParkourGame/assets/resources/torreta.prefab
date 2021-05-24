@@ -37,8 +37,8 @@ local prefab = {
             stepRot="0.005"
         },
         audiosource={
-            sound="NLsound.mp3", --sound="MagiSmite.wav",
-            volume="0.25",
+            sound="MagicSmite.wav", 
+            volume="10",
             velocity="0,0,0"
         }
     }
