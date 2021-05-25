@@ -40,6 +40,11 @@ local prefab = {
             sound="MagicSmite.wav", 
             volume="10",
             velocity="0,0,0"
+        },
+        animation={
+          animations="Dance",
+          playing="true",
+          loop="true"
         }
     }
 }

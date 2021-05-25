@@ -35,6 +35,11 @@ local prefab = {
         },
         lifetime={
             life="12"
+        },
+        animation={
+          animations="RunTop",
+          playing="true",
+          loop="true"
         }
     }
 }
