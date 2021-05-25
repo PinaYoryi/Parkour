@@ -63,8 +63,7 @@ void LevelBuilder::update() {
 			float dir = pRigid->getEntity()->getComponent<Transform>()->rotation().toEuler().z;
 
 			pRigid = Entity::instantiate(nameEnemy, _lastP)->getComponent<Rigidbody>();
-			pRigid->setPosition({ _lastP.x + (float)sin(dir * M_PI / 180.0f) * 45 , _lastP.y + (float)cos(dir * M_PI / 180.0f) * 45, _lastP.z });
-			pRigid->setRotation(Quaternion::Euler({ _lastR.x, _lastR.y, _lastR.z }));
+			pRigid->setPosition({ 0, -65, _lastP.z });
 		}
 
 		_myEntity->getComponent<AudioSource>()->playSound2D();
