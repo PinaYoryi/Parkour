@@ -12,8 +12,6 @@ if not exist ../../ParkourGame/bin/OgreMain.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgreMain_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgreMeshLodGenerator.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgreMeshLodGenerator_d.dll goto copydependencies
-if not exist ../../ParkourGame/bin/OgreOverlay.dll goto copydependencies
-if not exist ../../ParkourGame/bin/OgreOverlay_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgrePaging.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgrePaging_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgreProperty.dll goto copydependencies
@@ -22,8 +20,8 @@ if not exist ../../ParkourGame/bin/OgreRTShaderSystem.dll goto copydependencies
 if not exist ../../ParkourGame/bin/OgreRTShaderSystem_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/Plugin_ParticleFX.dll copydependencies
 if not exist ../../ParkourGame/bin/Plugin_ParticleFX_d.dll goto copydependencies
-if not exist ../../ParkourGame/bin/RenderSystem_Direct3D11.dll goto copydependencies
-if not exist ../../ParkourGame/bin/RenderSystem_Direct3D11_d.dll goto copydependencies
+if not exist ../../ParkourGame/bin/RenderSystem_GL.dll goto copydependencies
+if not exist ../../ParkourGame/bin/RenderSystem_GL_d.dll goto copydependencies
 if not exist ../../ParkourGame/bin/SDL2.dll goto copydependencies
 if not exist ../../ParkourGame/bin/zlib.dll goto copydependencies
 
