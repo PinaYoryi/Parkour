@@ -41,17 +41,14 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 
 void PlayerController::update()
 {
-
 	_time += GameManager::GetInstance()->getDeltaTime();
-	if (_airborne) {
+	if (_airborne || _myEntity->getComponent<Transform>()->position().y < -250) {	// Failsafe: si está tan bajo es porque ha caído
 		_timeFalling += GameManager::GetInstance()->getDeltaTime();
 		if (_timeFalling >= TIME_ALIVE_FALLING) playerDead();
 	}
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_ESCAPE)) {		
 		GameManager::GetInstance()->toScene("",sceneState::Pauses);
 	}
-
-
 }
 
 void PlayerController::fixedUpdate() {
