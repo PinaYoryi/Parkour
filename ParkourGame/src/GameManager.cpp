@@ -32,7 +32,7 @@ void GameManager::toScene(std::string scene, sceneState state) {
 	case Pauses://pausar la escena y cargar un menu
 		SceneManager::GetInstance()->pauseScene();
 		Entity::instantiate("botonReanudar.prefab");
-		Entity::instantiate("botonSalir.prefab");
+		Entity::instantiate("botonIrMenuPpal.prefab");
 
 		break;
 	case Neutral://cargar otra escena

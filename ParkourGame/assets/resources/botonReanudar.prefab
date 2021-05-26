@@ -11,13 +11,14 @@ local prefab = {
         },  
         button={
             text="Continuar",
-            position="0.3,0.3",
-            size="100,100",
+            position="0.35,0.4",
+            size="200,100",
             name="botonContinuar",
             type="RESUME",            
-            showCursor="true",            
+            showCursor="true", 
+            continueBullet="true",           
             nextScene=""
-        }  
+        } 
     }
 }
 

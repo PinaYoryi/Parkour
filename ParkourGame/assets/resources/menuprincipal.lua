@@ -41,6 +41,7 @@ local mapa = {
                     name="botonJugar",
                     type="CHANGE_SCENE",
                     showCursor="true",
+                    continueBullet="true",
                     nextScene="level.lua"
                 }
      	    }
@@ -62,6 +63,7 @@ local mapa = {
                     name="botonSalir",
                     type="EXIT",
                     showCursor="true",
+                    continueBullet="false",
                     nextScene=""
                 }
      	    }
