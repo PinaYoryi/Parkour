@@ -18,7 +18,7 @@ local prefab = {
             showCursor="true",
             normal="NormalImage",
             normalImage="TaharezLook/ButtonMenu",
-            continueBullet="false",
+            continueBullet="true",
             nextScene="menuprincipal.lua"
         }   
     }

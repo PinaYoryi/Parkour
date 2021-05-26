@@ -35,13 +35,15 @@ local mapa = {
                     parent="-1"
                 },
                 button={
-                    text="Volver al menu",
-                    position="0.35,0.65",
-                    size="200,100",
-                    name="botonVolver",
+                    text="Main Menu",
+                    position="0.3,0.65",
+                    size="240,100",
+                    name="botonAtras",
                     type="CHANGE_SCENE",
                     showCursor="true",
-                    continueBullet="false",
+                    normal="NormalImage",
+                    normalImage="TaharezLook/ButtonMenu",
+                    continueBullet="true",
                     nextScene="menuprincipal.lua"
                 }
      	    }
