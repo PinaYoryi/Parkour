@@ -35,14 +35,13 @@ local mapa = {
                     parent="-1"
                 },
                 button={
-                    text="Main Menu",
+                    text="",
                     position="0.3,0.65",
                     size="240,100",
                     name="botonAtras",
+                    properties="NormalImage,TaharezLook/ButtonMenu,HoverImage,TaharezLook/ButtonMenuHover,PushedImage,TaharezLook/ButtonMenuPushed",
                     type="CHANGE_SCENE",
                     showCursor="true",
-                    normal="NormalImage",
-                    normalImage="TaharezLook/ButtonMenu",
                     continueBullet="true",
                     nextScene="menuprincipal.lua"
                 }

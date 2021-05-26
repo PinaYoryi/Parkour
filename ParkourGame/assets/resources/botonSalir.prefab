@@ -10,14 +10,13 @@ local prefab = {
             parent="-1"
         },
         button={
-            text="Salir",
+            text="",
             position="0.3,0.5",
             size="240,100",
             name="botonSalir",
+            properties="NormalImage,TaharezLook/ButtonSalir,HoverImage,TaharezLook/ButtonSalirHover,PushedImage,TaharezLook/ButtonSalirPushed",
             type="EXIT",
             showCursor="true",
-            normal="NormalImage",
-            normalImage="TaharezLook/ButtonSalir",
             continueBullet="false",
             nextScene=""
         }    
