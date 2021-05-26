@@ -40,12 +40,15 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 	s = mapa.at("camID");
 	_camTrans = SceneManager::GetInstance()->getEntityByID(std::stoi(s))->getComponent<Transform>();
 
+	_playerLived = 0;
+
 	return true;
 }
 
 void PlayerController::update()
 {
 	_time += GameManager::GetInstance()->getDeltaTime();
+	_playerLived += GameManager::GetInstance()->getDeltaTime();
 	if (_airborne || _myEntity->getComponent<Transform>()->position().y < -250) {	// Failsafe: si está tan bajo es porque ha caído
 		_timeFalling += GameManager::GetInstance()->getDeltaTime();
 		if (_timeFalling >= TIME_ALIVE_FALLING) playerDead();
