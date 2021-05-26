@@ -57,4 +57,6 @@ protected:
 
 	bool _airborne = false;
 	float _timeFalling; //Tiempo que lleva cayendo el jugador
+
+	Transform* _camTrans;
 };

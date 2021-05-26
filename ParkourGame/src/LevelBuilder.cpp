@@ -56,7 +56,7 @@ void LevelBuilder::update() {
 		pRigid->setPosition({ _lastP.x, _lastP.y, _lastP.z });						// Se mueve 
 		pRigid->setRotation(Quaternion::Euler({ _lastR.x, _lastR.y, _lastR.z }));	// Y orienta según las variaciones aleatorias
 
-		if (rand() % 100 < _enemyChance) {		// Si debe ponerse enemigo
+		if (rand() % 100 < _enemyChance && _lastP.z < -100) {		// Si debe ponerse enemigo (en la primera plataforma no)
 			std::string nameEnemy = _turretPrefab;
 			if (rand() % 100 > _turretChance) nameEnemy = _dronePrefab;	// Se decide cuál instanciar
 

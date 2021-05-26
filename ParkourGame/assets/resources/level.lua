@@ -29,7 +29,8 @@ local mapa = {
         playercontroller={
           speed="175",
           maxJump="2",
-          jumpStr="7200"
+          jumpStr="7200",
+          camID="6"
         },
         audiolistener={
           position="0 0 0"
@@ -168,7 +169,7 @@ local mapa = {
           ysegments="10"
         }
       }
-    },
+    }
   }
 }
 

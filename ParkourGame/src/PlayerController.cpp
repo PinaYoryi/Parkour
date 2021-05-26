@@ -5,6 +5,7 @@
 #include <OgreRenderWindow.h>
 #include "GameManager.h"
 #include "AudioSource.h"
+#include "SceneManager.h"
 
 PlayerController::PlayerController() :
 	_trans(nullptr),
@@ -20,7 +21,7 @@ PlayerController::PlayerController() :
 }
 
 bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
-	if (mapa.find("speed") == mapa.end() || mapa.find("maxJump") == mapa.end() || mapa.find("jumpStr") == mapa.end()) return false;
+	if (mapa.find("speed") == mapa.end() || mapa.find("maxJump") == mapa.end() || mapa.find("jumpStr") == mapa.end() || mapa.find("camID") == mapa.end()) return false;
 
 	_trans = _myEntity->getComponent<Transform>();
 	_rigidbody = _myEntity->getComponent<Rigidbody>();
@@ -35,6 +36,9 @@ bool PlayerController::init(const std::map<std::string, std::string>& mapa) {
 
 	s = mapa.at("jumpStr");
 	_jumpStr = std::stoi(s);
+
+	s = mapa.at("camID");
+	_camTrans = SceneManager::GetInstance()->getEntityByID(std::stoi(s))->getComponent<Transform>();
 
 	return true;
 }
@@ -74,7 +78,7 @@ void PlayerController::fixedUpdate() {
 
 	if (moveInput) {
 		rotation.normalize();
-		Vector3<> dir = _trans->rotation().toVector();
+		Vector3<> dir = _camTrans->rotation().toVector();
 		dir = dir.crossProduct(_rigidbody->getGravity()).rotate(90, _rigidbody->getGravity()).normalize();
 		dir = dir.rotate((180 / M_PI) * atan2(rotation.z, rotation.x), _rigidbody->getGravity());
 		_rigidbody->addForce(dir * _speed);

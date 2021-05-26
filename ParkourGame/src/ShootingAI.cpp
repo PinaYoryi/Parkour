@@ -27,9 +27,9 @@ void ShootingAI::update() {
 
 	Vector3<> ini = _myEntity->getComponent<Transform>()->position();	// Inicio del trayecto
 	Vector3<> fin = _objective->getComponent<Transform>()->position();	// Final del trayecto
-	//_myEntity->getComponent<BasicAI>()->RotateTo(fin - ini);
+	_myEntity->getComponent<BasicAI>()->rotateTo(fin);
 
-	if (_cooldown < 0) {;
+	if (_cooldown < 0) {
 		_cooldown = _RoF;
 
 		Entity* bala = Entity::instantiate(_bala, _myEntity->getComponent<Transform>()->position());
