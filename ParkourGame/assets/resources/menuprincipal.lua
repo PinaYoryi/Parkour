@@ -36,11 +36,13 @@ local mapa = {
                 },
                 button={
                     text="Jugar",
-                    position="0.35,0.4",
-                    size="200,100",
+                    position="0.3,0.4",
+                    size="240,100",
                     name="botonJugar",
                     type="CHANGE_SCENE",
                     showCursor="true",
+                    normal="NormalImage",
+                    normalImage="TaharezLook/ButtonJugar",
                     continueBullet="true",
                     nextScene="level.lua"
                 }
@@ -58,11 +60,13 @@ local mapa = {
                 },
                 button={
                     text="Salir",
-                    position="0.35,0.65",
-                    size="200,100",
+                    position="0.3,0.65",
+                    size="240,100",
                     name="botonSalir",
                     type="EXIT",
                     showCursor="true",
+                    normal="NormalImage",
+                    normalImage="TaharezLook/ButtonSalir",
                     continueBullet="false",
                     nextScene=""
                 }
