@@ -104,6 +104,9 @@ copy /Y SILLY.dll "../../ParkourGame/bin/SILLY.dll"
 copy /Y SILLY_d.dll "../../ParkourGame/bin/SILLY_d.dll"
 
 :endcopy
+
+if not exist ../../ParkourGame/bin/scheme.cfg copy /Y scheme.cfg "../../ParkourGame/bin/scheme.cfg"
+
 echo fin
 
 cd ../../ParkourGame
