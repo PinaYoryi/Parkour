@@ -12,6 +12,7 @@
 #include "PlayerController.h"
 #include "LevelBuilder.h"
 #include "CameraController.h"
+#include "MusicPlayer.h"
 
 #if (defined _DEBUG)
 #include <crtdbg.h>
@@ -30,6 +31,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     ComponentFactoryRegistrations::ComponentFactoryRegistration<PlayerController>("playercontroller");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<LevelBuilder>("levelbuilder");
     ComponentFactoryRegistrations::ComponentFactoryRegistration<CameraController>("cameracontroller");
+    ComponentFactoryRegistrations::ComponentFactoryRegistration<MusicPlayer>("musicplayer");
 
     srand(time(NULL));
 

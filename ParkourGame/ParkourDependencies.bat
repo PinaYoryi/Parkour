@@ -66,7 +66,7 @@ copy /Y OgreMain_d.dll "../../ParkourGame/bin/OgreMain_d.dll"
 copy /Y OgreMeshLodGenerator.dll "../../ParkourGame/bin/OgreMeshLodGenerator.dll"
 copy /Y OgreMeshLodGenerator_d.dll "../../ParkourGame/bin/OgreMeshLodGenerator_d.dll"
 copy /Y OgrePaging.dll "../../ParkourGame/bin/OgrePaging.dll"
-copy /Y OgrePaging_d.dll "../../ParkourGame/bin/OgrePaging_d.dll"
+Copy /Y OgrePaging_d.dll "../../ParkourGame/bin/OgrePaging_d.dll"
 copy /Y OgreProperty.dll "../../ParkourGame/bin/OgreProperty.dll"
 copy /Y OgreProperty_d.dll "../../ParkourGame/bin/OgreProperty_d.dll"
 copy /Y OgreRTShaderSystem.dll "../../ParkourGame/bin/OgreRTShaderSystem.dll"
@@ -104,6 +104,9 @@ copy /Y SILLY.dll "../../ParkourGame/bin/SILLY.dll"
 copy /Y SILLY_d.dll "../../ParkourGame/bin/SILLY_d.dll"
 
 :endcopy
+
+if not exist ../../ParkourGame/bin/scheme.cfg copy /Y scheme.cfg "../../ParkourGame/bin/scheme.cfg"
+
 echo fin
 
 cd ../../ParkourGame

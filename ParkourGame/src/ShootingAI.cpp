@@ -42,6 +42,6 @@ void ShootingAI::update() {
 		tra *= 500;	// Hasta el "infinito"
 		bala->getComponent<BasicAI>()->moveTo(ini + tra);
 
-		_myEntity->getComponent<AudioSource>()->playSound3D();
+		_myEntity->getComponent<AudioSource>()->playSound3D(false);
 	}
 }

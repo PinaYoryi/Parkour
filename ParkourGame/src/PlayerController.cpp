@@ -89,7 +89,7 @@ void PlayerController::fixedUpdate() {
 
 	if (Input::GetInstance()->keyDown(SDL_SCANCODE_SPACE) && _remJump-- > 0) {
 		_rigidbody->addForce(_rigidbody->getGravity().normalized() * -_jumpStr);
-		_myEntity->getComponent<AudioSource>()->playSound3D();
+		_myEntity->getComponent<AudioSource>()->playSound3D(false);
 	}
 }
 

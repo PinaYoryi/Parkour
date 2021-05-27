@@ -2,6 +2,8 @@
 #include "MotorLoop.h"
 #include "SceneManager.h"
 #include "Gui.h"
+#include "TextComponent.h"
+#include "Audio.h"
 
 GameManager* GameManager::_singleton = nullptr;
 
@@ -20,23 +22,25 @@ float GameManager::getDeltaTime() {
 
 void GameManager::onFinish(float time) {
 	_secondsLasted = time;
-	toScene("menufinal.lua");
+	SceneManager::GetInstance()->pauseScene();
+	Entity::instantiate("textScore.prefab")->getComponent<TextComponent>()->setText("Has durado " + std::to_string(_secondsLasted) + " segundos");
+	Entity::instantiate("botonIrMenuPpal.prefab");
+	Entity::instantiate("botonReiniciar.prefab");
 }
+
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)
 	{
-	case Continues://continuar la escena pausada (elimina las entidades no pausadas)
-		SceneManager::GetInstance()->continueScene();
-		//Gui::GetInstance()->mouseVisible(false);
+	case Continues:	// continuar la escena pausada (elimina las entidades no pausadas)
+		SceneManager::GetInstance()->continueScene();		
 		break;
-	case Pauses://pausar la escena y cargar un menu
+	case Pauses:	// pausar la escena y cargar un menu
 		SceneManager::GetInstance()->pauseScene();
 		Entity::instantiate("botonReanudar.prefab");
 		Entity::instantiate("botonIrMenuPpal.prefab");
 
 		break;
-	case Neutral://cargar otra escena
+	case Neutral:	// cargar otra escena
 		SceneManager::GetInstance()->newScene(scene);
-
 	}
 }

@@ -122,7 +122,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/Cegui/src/build/cegui/include;../../P32021/dependencies/Cegui/src/cegui/include;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;../../P32021/dependencies/Lua/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,7 +148,7 @@ resources.bat</Command>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/Cegui/src/build/cegui/include;../../P32021/dependencies/Cegui/src/cegui/include;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;../../P32021/dependencies/Lua/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;../../P32021/dependencies/Lua/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -173,6 +173,7 @@ resources.bat</Command>
     <ClCompile Include="..\src\DroneAI.cpp" />
     <ClCompile Include="..\src\Floor.cpp" />
     <ClCompile Include="..\src\LevelBuilder.cpp" />
+    <ClCompile Include="..\src\MusicPlayer.cpp" />
     <ClCompile Include="..\src\PlayerController.cpp" />
     <ClCompile Include="..\src\ShootingAI.cpp" />
     <ClCompile Include="..\src\GameManager.cpp" />
@@ -185,6 +186,7 @@ resources.bat</Command>
     <ClInclude Include="..\src\DroneAI.h" />
     <ClInclude Include="..\src\Floor.h" />
     <ClInclude Include="..\src\LevelBuilder.h" />
+    <ClInclude Include="..\src\MusicPlayer.h" />
     <ClInclude Include="..\src\PlayerController.h" />
     <ClInclude Include="..\src\ShootingAI.h" />
     <ClInclude Include="..\src\GameManager.h" />

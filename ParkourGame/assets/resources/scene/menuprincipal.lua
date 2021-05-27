@@ -36,8 +36,8 @@ local mapa = {
                 },
                 button={
                     text="",
-                    position="0.3,0.45",
-                    size="240,100",
+                    position="0.3,0.40",
+                    size="240,70",
                     name="botonJugar",
                     properties="NormalImage,TaharezLook/ButtonJugar,HoverImage,TaharezLook/ButtonJugarHover,PushedImage,TaharezLook/ButtonJugarPushed",
                     type="CHANGE_SCENE",
@@ -49,7 +49,7 @@ local mapa = {
      	    }
         },
         {
-            name="BotonS",
+            name="BotonO",
             id=3,
             components={
                 transform={
@@ -60,8 +60,32 @@ local mapa = {
                 },
                 button={
                     text="",
-                    position="0.3,0.7",
-                    size="240,100",
+                    position="0.3,0.57",
+                    size="240,70",
+                    name="botonOpciones",
+                    properties="NormalImage,TaharezLook/ButtonJugar,HoverImage,TaharezLook/ButtonJugarHover,PushedImage,TaharezLook/ButtonJugarPushed",
+                    type="CHANGE_SCENE",
+                    showCursor="true",
+                    cursorImage="TaharezLook/MouseGeorgi",
+                    continueBullet="true",
+                    nextScene="menucontroles.lua"
+                }
+     	    }
+        },
+        {
+            name="BotonS",
+            id=4,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                button={
+                    text="",
+                    position="0.3,0.75",
+                    size="240,70",
                     name="botonSalir",
                     properties="NormalImage,TaharezLook/ButtonSalir,HoverImage,TaharezLook/ButtonSalirHover,PushedImage,TaharezLook/ButtonSalirPushed",
                     type="EXIT",
@@ -97,24 +121,43 @@ local mapa = {
             }
         },
         {
-        name="Imagen",
-        id=5,
-        components={
-        transform={
-          position="0,0,0",
-          rotation="0,0,0",
-          scale="1,1,1",
-          parent="-1"
+            name="Imagen",
+            id=5,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                image={
+                    source="TaharezLook/Ogrevedad",
+                    position="0.15,0.1",
+                    size="450,130",
+                    name="Titulo",
+                    properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Ogrevedad"
+                }
+            }
         },
-        image={
-          source="TaharezLook/Ogrevedad",
-          position="0.15,0.1",
-          size="450,130",
-          name="Titulo",
-          properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Ogrevedad"
+        {
+            name="musicBox",
+            id=7,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                musicplayer={
+                },
+                audiosource={
+                    sound="TremLoadingloopl.wav",
+                    volume="0.125",
+                    velocity="0,0,0"
+                }
+            }
         }
-        }
-    }
     }
 }
 
