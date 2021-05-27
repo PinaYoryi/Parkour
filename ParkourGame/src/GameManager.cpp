@@ -26,6 +26,7 @@ void GameManager::onFinish(float time) {
 	Entity::instantiate("textScore.prefab")->getComponent<TextComponent>()->setText("Has durado " + std::to_string(_secondsLasted) + " segundos");
 	Entity::instantiate("botonIrMenuPpal.prefab");
 	Entity::instantiate("botonReiniciar.prefab");
+	Entity::instantiate("perdiste.prefab");
 }
 
 void GameManager::toScene(std::string scene, sceneState state) {
