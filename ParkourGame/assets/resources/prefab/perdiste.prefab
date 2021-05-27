@@ -1,0 +1,24 @@
+local prefab = { 
+            name="ImagenPerdiste",
+            id=1,
+            cursor=1,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                image={
+                    source="TaharezLook/Perdiste",
+                    position="0.38,0.1",
+                    size="450,130",
+                    name="Perdiste",
+                    properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Perdiste"
+                }
+            }
+}
+
+function GetPrefab()
+    return prefab
+end

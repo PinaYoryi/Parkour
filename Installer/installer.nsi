@@ -13,8 +13,8 @@ Var "GameName"
 !define MUI_HEADERIMAGE_BITMAP "header_bitmap.bmp" ; NOTE: images have to be 8 bits in depth
 !define MUI_HEADERIMAGE_UNBITMAP "header_bitmap.bmp" ; NOTE: images have to be 8 bits in depth
 
-!define MUI_WELCOMEFINISHPAGE_BITMAP "..\assets\Assets\images\installer\welcomepage_bitmap.bmp"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "..\assets\Assets\images\installer\welcomepage_bitmap.bmp"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "welcomepage_bitmap.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "welcomepage_bitmap.bmp"
 
 Function finishpageaction
 	CreateShortcut "$desktop\$GameName.lnk" "$INSTDIR\Ogrevedad.exe"
@@ -43,7 +43,7 @@ Section
 	StrCpy $GameName "Ogrevedad"
 	
     # set the directory and files to go to the output directory
-	File /r "bin\*"
+	File /r "..\ParkourGame\bin\*"
 	#end of files
  
  

@@ -36,8 +36,8 @@ local mapa = {
                 },
                 button={
                     text="",
-                    position="0.3,0.40",
-                    size="240,70",
+                    position="0.43,0.40",
+                    size="240,100",
                     name="botonJugar",
                     properties="NormalImage,TaharezLook/ButtonJugar,HoverImage,TaharezLook/ButtonJugarHover,PushedImage,TaharezLook/ButtonJugarPushed",
                     type="CHANGE_SCENE",
@@ -60,10 +60,10 @@ local mapa = {
                 },
                 button={
                     text="",
-                    position="0.3,0.57",
-                    size="240,70",
+                    position="0.43,0.57",
+                    size="240,100",
                     name="botonOpciones",
-                    properties="NormalImage,TaharezLook/ButtonJugar,HoverImage,TaharezLook/ButtonJugarHover,PushedImage,TaharezLook/ButtonJugarPushed",
+                    properties="NormalImage,TaharezLook/ButtonControles,HoverImage,TaharezLook/ButtonControlesHover,PushedImage,TaharezLook/ButtonControlesPushed",
                     type="CHANGE_SCENE",
                     showCursor="true",
                     cursorImage="TaharezLook/MouseGeorgi",
@@ -84,8 +84,8 @@ local mapa = {
                 },
                 button={
                     text="",
-                    position="0.3,0.75",
-                    size="240,70",
+                    position="0.43,0.75",
+                    size="240,100",
                     name="botonSalir",
                     properties="NormalImage,TaharezLook/ButtonSalir,HoverImage,TaharezLook/ButtonSalirHover,PushedImage,TaharezLook/ButtonSalirPushed",
                     type="EXIT",
@@ -132,7 +132,7 @@ local mapa = {
                 },
                 image={
                     source="TaharezLook/Ogrevedad",
-                    position="0.15,0.1",
+                    position="0.38,0.17",
                     size="450,130",
                     name="Titulo",
                     properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Ogrevedad"

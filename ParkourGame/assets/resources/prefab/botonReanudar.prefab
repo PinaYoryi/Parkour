@@ -11,7 +11,7 @@ local prefab = {
         },  
         button={
             text="",
-            position="0.3,0.4",
+            position="0.43,0.4",
             size="240,100",
             name="botonContinuar",
             properties="NormalImage,TaharezLook/ButtonContinuar,HoverImage,TaharezLook/ButtonContinuarHover,PushedImage,TaharezLook/ButtonContinuarPushed",

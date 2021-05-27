@@ -36,7 +36,7 @@ local mapa = {
                 },
                 button={
                     text="",
-                    position="0.3,0.65",
+                    position="0.45,0.65",
                     size="240,100",
                     name="botonAtras",
                     properties="NormalImage,TaharezLook/ButtonMenu,HoverImage,TaharezLook/ButtonMenuHover,PushedImage,TaharezLook/ButtonMenuPushed",
@@ -60,9 +60,9 @@ local mapa = {
                 },
                 image={
                     source="TaharezLook/Perdiste",
-                    position="0.15,0.1",
+                    position="0.3,0.1",
                     size="450,130",
-                    name="Titulo",
+                    name="Perdiste",
                     properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Perdiste"
                 }
             }

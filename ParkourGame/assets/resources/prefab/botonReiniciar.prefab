@@ -1,5 +1,5 @@
 local prefab = { 
-    name="BotonReanudar",
+    name="BotonReiniciar",
     id=1,
     cursor=1,
     components={  
@@ -11,10 +11,10 @@ local prefab = {
         },  
         button={
             text="",
-            position="0.3,0.4",
+            position="0.43,0.45",
             size="240,100",
-            name="botonReanudar",
-            properties="NormalImage,TaharezLook/ButtonContinuar,HoverImage,TaharezLook/ButtonContinuarHover,PushedImage,TaharezLook/ButtonContinuarPushed",
+            name="botonReiniciar",
+            properties="NormalImage,TaharezLook/ButtonJugar,HoverImage,TaharezLook/ButtonJugarHover,PushedImage,TaharezLook/ButtonJugarPushed",
             type="CHANGE_SCENE",            
             showCursor="true",
             cursorImage="TaharezLook/MouseGeorgi",
