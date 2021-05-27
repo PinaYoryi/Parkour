@@ -60,3 +60,24 @@ Section
 	!insertmacro MUI_STARTMENU_WRITE_END
 
 SectionEnd
+
+# uninstaller section start
+Section "Uninstall"
+ 
+ 	StrCpy $GameName "Ogrevedad"
+	
+    # first, delete the uninstaller
+    Delete "$INSTDIR\uninstall $GameName.exe"
+	
+	# second, remove the link from the start menu	
+   !insertmacro MUI_STARTMENU_GETFOLDER PinaYoryi $StartMenuFolder
+   
+    Delete "$SMPROGRAMS\$StartMenuFolder\uninstall $GameName.lnk"
+    Delete "$SMPROGRAMS\$StartMenuFolder\$GameName.lnk"
+	Delete "$desktop\$GameName.lnk"
+	RMDir "$SMPROGRAMS\$StartMenuFolder"
+	
+	RMDir /r $INSTDIR
+
+# uninstaller section end
+SectionEnd
