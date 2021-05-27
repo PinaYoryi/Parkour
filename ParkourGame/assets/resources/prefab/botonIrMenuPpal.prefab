@@ -1,7 +1,7 @@
 local prefab = { 
     name="BotonReanudar",
     id=2,
-    cursor=0,
+    cursor=1,
     components={  
         transform={
             position="0,0,0",
