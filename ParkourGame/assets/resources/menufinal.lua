@@ -42,11 +42,31 @@ local mapa = {
                     properties="NormalImage,TaharezLook/ButtonMenu,HoverImage,TaharezLook/ButtonMenuHover,PushedImage,TaharezLook/ButtonMenuPushed",
                     type="CHANGE_SCENE",
                     showCursor="true",
+                    cursorImage="TaharezLook/MouseGeorgi",
                     continueBullet="true",
                     nextScene="menuprincipal.lua"
                 }
      	    }
         },
+        {
+            name="ImagenPerdiste",
+            id=3,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                image={
+                    source="TaharezLook/Perdiste",
+                    position="0.15,0.1",
+                    size="450,130",
+                    name="Titulo",
+                    properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Perdiste"
+                }
+            }
+        }
         -- {
         --     name="BotonV",
         --     id=2,

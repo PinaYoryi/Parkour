@@ -122,6 +122,7 @@ local mapa = {
           properties="NormalImage,TaharezLook/ButtonSalir,HoverImage,TaharezLook/ButtonSalirHover,PushedImage,TaharezLook/ButtonSalirPushed",
           type="EXIT",
           showCursor="true",
+          cursorImage="TaharezLook/MouseGeorgi",
           continueBullet="false",
           nextScene=""
         }   	

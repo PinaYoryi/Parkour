@@ -254,4 +254,7 @@
     <Image height="41" name="ButtonMenuPushed" width="115" xPos="373" yPos="216" />
     <Image height="41" name="ButtonSalirPushed" width="115" xPos="373" yPos="260" />
     <Image height="41" name="ButtonContinuarPushed" width="115" xPos="373" yPos="302" />
+    <Image height="46" name="MouseGeorgi" width="35" xPos="119" yPos="156" />
+    <Image height="50" name="Ogrevedad" width="250" xPos="0" yPos="228" />
+    <Image height="60" name="Perdiste" width="208" xPos="0" yPos="280" />
 </Imageset>
