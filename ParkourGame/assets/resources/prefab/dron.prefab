@@ -6,11 +6,11 @@ local prefab = {
     transform={
             position="0,40,0",
             rotation="0,90,0",
-            scale="1,1,1",
+            scale="10,10,10",
             parent="-1"
         },
         renderer={
-            mesh="Sinbad.mesh",
+            mesh="Cube.011.mesh",
             material="",
             visible="true"
         },
@@ -35,11 +35,6 @@ local prefab = {
         },
         lifetime={
             life="12"
-        },
-        animation={
-          animations="RunTop",
-          playing="true",
-          loop="true"
         }
     }
 }
