@@ -1,11 +1,11 @@
-cd ../../P32021/bin
-copy /Y resources.cfg "../../ParkourGame/bin/resources.cfg"
-cd ../../ParkourGame/assets
+cd ../../P32021/dependencies\Ogre\Build\bin\release
+copy /Y resources.cfg "../../../../../../ParkourGame/bin/resources.cfg"
+cd ../../../../../../ParkourGame/assets
 xcopy ..\..\P32021\assets\resources ..\bin\resources /y /e /i
 xcopy .\resources ..\bin\resources /y /e /i
 cd ..\bin\resources
 echo [General] >> ../resources.cfg
-echo FileSystem=%CD%/resources >> ../resources.cfg
+echo FileSystem=%CD% >> ../resources.cfg
 for /r %CD% %%f in (*.zip) do echo Zip=%%~pnxf >> ../resources.cfg
 if not exist ../resources/gui goto ceguiend
 if exist ../resources/gui/animations echo [animations] >> ../resources.cfg & echo FileSystem=%CD%/gui/animations >> ../resources.cfg
