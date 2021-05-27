@@ -38,7 +38,7 @@ WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdS
     GameManager::Init();
 
     PinaMotor motor;
-    if (!motor.init("Test")) {
+    if (!motor.init("Ogrevedad")) {
 #if (defined _DEBUG)
         std::cerr << "\nError en init\n";
 #endif

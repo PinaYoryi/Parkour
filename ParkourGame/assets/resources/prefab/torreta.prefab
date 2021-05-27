@@ -4,12 +4,12 @@ local prefab = {
     components={
     transform={
             position="0,40,0",
-            rotation="0,90,0",
-            scale="1,1,1",
+            rotation="0,0,0",
+            scale="4,4,4",
             parent="-1"
         },
         renderer={
-            mesh="Sinbad.mesh",
+            mesh="Malla.mesh",
             material="",
             visible="true"
         },
@@ -40,11 +40,6 @@ local prefab = {
             sound="MagicSmite.wav", 
             volume="10",
             velocity="0,0,0"
-        },
-        animation={
-          animations="Dance",
-          playing="true",
-          loop="true"
         }
     }
 }
