@@ -1,5 +1,6 @@
 !include "MUI2.nsh"
 
+
 Name "Ogrevedad"
 OutFile "Ogrevedad setup.exe"
 Unicode True
@@ -26,6 +27,7 @@ FunctionEnd
 !define MUI_FINISHPAGE_SHOWREADME_FUNCTION finishpageaction
 
 !insertmacro MUI_PAGE_WELCOME
+
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_STARTMENU PinaYoryi $StartMenuFolder
 !insertmacro MUI_PAGE_INSTFILES
@@ -43,7 +45,8 @@ Section
 	StrCpy $GameName "Ogrevedad"
 	
     # set the directory and files to go to the output directory
-	File /r "..\ParkourGame\bin\*"
+	SetOutPath $INSTDIR
+	File /a /r "..\ParkourGame\bin\*"
 	#end of files
  
  
