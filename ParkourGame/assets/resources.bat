@@ -16,3 +16,6 @@ if exist assets/resources/gui/schemes echo [schemes] >> bin/resources.cfg & echo
 if exist assets/resources/gui/xml_schemas echo [xmlSchemas] >> bin/resources.cfg & echo FileSystem=%CD%/assets/resources/gui/xml_schemas >> bin/resources.cfg
 :ceguiend
 cd assets/
+
+
+xcopy .\resources ..\bin\resources /y /e /i
