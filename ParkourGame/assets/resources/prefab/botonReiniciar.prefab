@@ -1,0 +1,29 @@
+local prefab = { 
+    name="BotonReanudar",
+    id=1,
+    cursor=1,
+    components={  
+        transform={
+            position="0,0,0",
+            rotation="0,0,0",
+            scale="0.01,0.01,0.01",
+            parent="-1"
+        },  
+        button={
+            text="",
+            position="0.3,0.4",
+            size="240,100",
+            name="botonReanudar",
+            properties="NormalImage,TaharezLook/ButtonContinuar,HoverImage,TaharezLook/ButtonContinuarHover,PushedImage,TaharezLook/ButtonContinuarPushed",
+            type="CHANGE_SCENE",            
+            showCursor="true",
+            cursorImage="TaharezLook/MouseGeorgi",
+            continueBullet="true",           
+            nextScene="level.lua"
+        } 
+    }
+}
+
+function GetPrefab()
+    return prefab
+end
