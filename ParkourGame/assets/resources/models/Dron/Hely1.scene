@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.0 -->
+<!-- export_time: Wed, 26 May 2021 19:38:26 +0000 -->
+<scene author="Xexu98" formatVersion="1.1" >
+  <nodes >
+    <node name="helicopter_box" >
+      <position x="-0.000000" y="0.078832" z="0.099415" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="Cube.011.mesh" name="helicopter_box" >
+        <userData >
+          <property data='&lt;bpy id prop: owner="MECube.011", name="ms3d", address=0x000001AD545E1168&gt;' name="ms3d" type="IDPropertyGroup" />
+        </userData>
+      </entity>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="Hely.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground b="0.05087608844041824" g="0.05087608844041824" r="0.05087608844041824" />
+  </environment>
+</scene>
