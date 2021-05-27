@@ -97,24 +97,43 @@ local mapa = {
             }
         },
         {
-        name="Imagen",
-        id=5,
-        components={
-        transform={
-          position="0,0,0",
-          rotation="0,0,0",
-          scale="1,1,1",
-          parent="-1"
+            name="Imagen",
+            id=5,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                image={
+                    source="TaharezLook/Ogrevedad",
+                    position="0.15,0.1",
+                    size="450,130",
+                    name="Titulo",
+                    properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Ogrevedad"
+                }
+            }
         },
-        image={
-          source="TaharezLook/Ogrevedad",
-          position="0.15,0.1",
-          size="450,130",
-          name="Titulo",
-          properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Ogrevedad"
+        {
+            name="musicBox",
+            id=7,
+            components={
+                transform={
+                    position="0,0,0",
+                    rotation="0,0,0",
+                    scale="1,1,1",
+                    parent="-1"
+                },
+                musicplayer={
+                },
+                audiosource={
+                    sound="TremLoadingloopl.wav",
+                    volume="0.125",
+                    velocity="0,0,0"
+                }
+            }
         }
-        }
-    }
     }
 }
 

@@ -3,7 +3,7 @@
 #include "SceneManager.h"
 #include "Gui.h"
 #include "TextComponent.h"
-#include <iomanip>
+#include "Audio.h"
 
 GameManager* GameManager::_singleton = nullptr;
 
@@ -25,8 +25,7 @@ void GameManager::onFinish(float time) {
 	SceneManager::GetInstance()->pauseScene();
 	Entity::instantiate("botonIrMenuPpal.prefab");
 	Entity::instantiate("botonReiniciar.prefab");
-	float nearest = roundf(_secondsLasted * 100) / 100;  /* Result: 37.78 */
-	Entity::instantiate("textScore.prefab")->getComponent<TextComponent>()->setText("Has durado " + std::to_string(nearest) + " segundos");
+	Entity::instantiate("textScore.prefab")->getComponent<TextComponent>()->setText("Has durado " + std::to_string(_secondsLasted) + " segundos");
 }
 
 void GameManager::toScene(std::string scene, sceneState state) {
@@ -43,6 +42,5 @@ void GameManager::toScene(std::string scene, sceneState state) {
 		break;
 	case Neutral:	// cargar otra escena
 		SceneManager::GetInstance()->newScene(scene);
-
 	}
 }

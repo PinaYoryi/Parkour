@@ -173,6 +173,7 @@ resources.bat</Command>
     <ClCompile Include="..\src\DroneAI.cpp" />
     <ClCompile Include="..\src\Floor.cpp" />
     <ClCompile Include="..\src\LevelBuilder.cpp" />
+    <ClCompile Include="..\src\MusicPlayer.cpp" />
     <ClCompile Include="..\src\PlayerController.cpp" />
     <ClCompile Include="..\src\ShootingAI.cpp" />
     <ClCompile Include="..\src\GameManager.cpp" />
@@ -185,6 +186,7 @@ resources.bat</Command>
     <ClInclude Include="..\src\DroneAI.h" />
     <ClInclude Include="..\src\Floor.h" />
     <ClInclude Include="..\src\LevelBuilder.h" />
+    <ClInclude Include="..\src\MusicPlayer.h" />
     <ClInclude Include="..\src\PlayerController.h" />
     <ClInclude Include="..\src\ShootingAI.h" />
     <ClInclude Include="..\src\GameManager.h" />

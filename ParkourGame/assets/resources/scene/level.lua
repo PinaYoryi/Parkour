@@ -155,7 +155,7 @@ local mapa = {
           rotation="0,0,0",
           scale="1,1,1",
           parent="-1"
-        },        
+        },
         skybox={
           enable="true",
           planenormal="Z",
@@ -167,6 +167,25 @@ local mapa = {
           bow="10.0",
           xsegments="10",
           ysegments="10"
+        }
+      }
+    },
+    {
+      name="musicBox",
+      id=7,
+      components={
+        transform={
+          position="0,0,0",
+          rotation="0,0,0",
+          scale="1,1,1",
+          parent="-1"
+        },
+        musicplayer={
+        },
+        audiosource={
+          sound="CyberpunkMoonlightSonata.mp3",
+          volume="0.125",
+          velocity="0,0,0"
         }
       }
     }

@@ -68,6 +68,6 @@ void LevelBuilder::update() {
 			pRigid->setPosition({ 0, -65, _lastP.z });
 		}
 
-		_myEntity->getComponent<AudioSource>()->playSound2D();
+		_myEntity->getComponent<AudioSource>()->playSound2D(false);
 	}
 }
