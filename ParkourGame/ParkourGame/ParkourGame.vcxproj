@@ -122,7 +122,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/Cegui/src/build/cegui/include;../../P32021/dependencies/Cegui/src/cegui/include;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;../../P32021/dependencies/Lua/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,7 +148,7 @@ resources.bat</Command>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/Cegui/src/build/cegui/include;../../P32021/dependencies/Cegui/src/cegui/include;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;../../P32021/dependencies/Lua/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../P32021/dependencies/Ogre/Src/Components/RTShaderSystem/include;../../P32021/dependencies/Ogre/Build/SDL2-2.0.10/include;../../P32021/dependencies/Ogre/Build/include;../../P32021/dependencies/Ogre/Src/OgreMain/include;../../P32021/dependencies/Fmod/include;../../P32021/dependencies/Bullet/src/src/;../../P32021/dependencies/Bullet/build/src/;../../P32021/dependencies/CeguiDependencies/build/dependencies/include;../../P32021/dependencies/Lua/include;%(AdditionalIncludeDirectories);../../P32021/include/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
