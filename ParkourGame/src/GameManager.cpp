@@ -20,7 +20,7 @@ float GameManager::getDeltaTime() {
 
 void GameManager::onFinish(float time) {
 	_secondsLasted = time;
-	toScene("level.lua");
+	toScene("menufinal.lua");
 }
 void GameManager::toScene(std::string scene, sceneState state) {
 	switch (state)

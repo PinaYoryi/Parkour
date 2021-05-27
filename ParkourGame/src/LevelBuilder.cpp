@@ -1,10 +1,12 @@
 #include "Lifetime.h"
 #include "SceneManager.h"
-#include "SceneManager.cpp"
 #include "LevelBuilder.h"
 #include "MotorLoop.h"
+#include "Rigidbody.h"
+#include "AudioSource.h"
 #include <random>
-LevelBuilder::LevelBuilder() {}
+
+LevelBuilder::LevelBuilder() :_cTime(0), _enemyChance(0), _mTime(0), _turretChance(0) {}
 
 bool LevelBuilder::init(const std::map<std::string, std::string>& mapa) {
 	if (mapa.find("platformprefab") == mapa.end() || mapa.find("lastplatform") == mapa.end() || mapa.find("time") == mapa.end() ||

@@ -115,12 +115,14 @@ local mapa = {
     	id=5,
     	components={
         button={
-          text="Salir",
+          text="",
           position="0.5,0.5",
           size="100,100",
           name="botonSalir",
+          properties="NormalImage,TaharezLook/ButtonSalir,HoverImage,TaharezLook/ButtonSalirHover,PushedImage,TaharezLook/ButtonSalirPushed",
           type="EXIT",
           showCursor="true",
+          cursorImage="TaharezLook/MouseGeorgi",
           continueBullet="false",
           nextScene=""
         }   	

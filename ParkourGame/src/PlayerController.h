@@ -56,7 +56,9 @@ protected:
 	int _jumpStr;	// Potencia del salto
 
 	bool _airborne = false;
-	float _timeFalling; //Tiempo que lleva cayendo el jugador
+	float _timeFalling; // Tiempo que lleva cayendo el jugador
 
 	Transform* _camTrans;
+
+	float _playerLived;	// Tiempo total que ha aguantado el jugador
 };

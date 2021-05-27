@@ -35,12 +35,14 @@ local mapa = {
                     parent="-1"
                 },
                 button={
-                    text="Jugar",
-                    position="0.35,0.4",
-                    size="200,100",
+                    text="",
+                    position="0.3,0.45",
+                    size="240,100",
                     name="botonJugar",
+                    properties="NormalImage,TaharezLook/ButtonJugar,HoverImage,TaharezLook/ButtonJugarHover,PushedImage,TaharezLook/ButtonJugarPushed",
                     type="CHANGE_SCENE",
                     showCursor="true",
+                    cursorImage="TaharezLook/MouseGeorgi",
                     continueBullet="true",
                     nextScene="level.lua"
                 }
@@ -57,12 +59,14 @@ local mapa = {
                     parent="-1"
                 },
                 button={
-                    text="Salir",
-                    position="0.35,0.65",
-                    size="200,100",
+                    text="",
+                    position="0.3,0.7",
+                    size="240,100",
                     name="botonSalir",
+                    properties="NormalImage,TaharezLook/ButtonSalir,HoverImage,TaharezLook/ButtonSalirHover,PushedImage,TaharezLook/ButtonSalirPushed",
                     type="EXIT",
                     showCursor="true",
+                    cursorImage="TaharezLook/MouseGeorgi",
                     continueBullet="false",
                     nextScene=""
                 }
@@ -91,7 +95,26 @@ local mapa = {
                     ysegments="10"
                 }
             }
+        },
+        {
+        name="Imagen",
+        id=5,
+        components={
+        transform={
+          position="0,0,0",
+          rotation="0,0,0",
+          scale="1,1,1",
+          parent="-1"
+        },
+        image={
+          source="TaharezLook/Ogrevedad",
+          position="0.15,0.1",
+          size="450,130",
+          name="Titulo",
+          properties="BackgroundEnabled,false,FrameEnabled,false,Image,TaharezLook/Ogrevedad"
         }
+        }
+    }
     }
 }
 

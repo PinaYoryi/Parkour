@@ -40,8 +40,6 @@ public:
 	float getDeltaTime();
 
 	float getLastedTime() { return _secondsLasted; }
-
-
 protected:
 	static GameManager* _singleton;
 
